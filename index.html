@@ -1,345 +1,493 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Mahmuda Urmi | Portfolio</title>
-
-  <meta name="description" content="The personal portfolio of Mahmuda Urmi, exploring communication, public relations, content and storytelling.">
-
+  <meta name="description" content="Mahmuda Urmi's professional portfolio in communication, public relations, content strategy, storytelling and research.">
+  <meta name="theme-color" content="#f7f8fa">
+  <title>Mahmuda Urmi | Communication & Storytelling</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --ink: #202b38;
+      --muted: #647181;
+      --line: #e4e8ed;
+      --paper: #f7f8fa;
+      --white: #ffffff;
+      --blue: #315d82;
+      --blue-dark: #234663;
+      --blue-soft: #eaf1f7;
+      --sage: #eaf0ed;
+      --shadow: 0 18px 50px rgba(32, 43, 56, .07);
+      --radius: 20px;
+      --max: 1120px;
     }
-
-    html {
-      scroll-behavior: smooth;
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: "DM Sans", sans-serif; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(var(--max), calc(100% - 44px)); margin: 0 auto; }
+    .site-header { position: sticky; top: 0; z-index: 20; background: rgba(247,248,250,.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(228,232,237,.85); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-family: Manrope, sans-serif; font-size: 1.05rem; font-weight: 800; letter-spacing: -.04em; }
+    .brand span { color: var(--blue); }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: #526071; font-size: .88rem; font-weight: 600; }
+    .nav-links a:hover, .text-link:hover { color: var(--blue); }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: white; border-radius: 10px; padding: 8px 12px; color: var(--ink); }
+    .hero { padding: 94px 0 78px; background: radial-gradient(circle at 88% 12%, #eaf1f7 0, transparent 28%), linear-gradient(135deg,#fbfcfd 0%,#f1f4f7 100%); border-bottom: 1px solid var(--line); }
+    .hero-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 70px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: .76rem; font-weight: 800; text-transform: uppercase; letter-spacing: .16em; }
+    .eyebrow:before { content: ""; width: 24px; height: 2px; background: var(--blue); }
+    h1,h2,h3,p { margin-top: 0; }
+    h1 { margin: 22px 0 18px; max-width: 720px; font-family: Manrope, sans-serif; font-size: clamp(2.7rem,6vw,5.3rem); line-height: 1.06; letter-spacing: -.065em; font-weight: 800; }
+    h1 em { color: var(--blue); font-style: normal; }
+    .hero-copy { max-width: 650px; color: var(--muted); font-size: 1.08rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 9px; padding: 12px 19px; border: 1px solid var(--blue); border-radius: 999px; background: var(--blue); color: white; font-weight: 700; font-size: .9rem; transition: .2s ease; }
+    .btn:hover { background: var(--blue-dark); transform: translateY(-2px); }
+    .btn.secondary { background: transparent; color: var(--blue); }
+    .btn.secondary:hover { background: var(--blue-soft); }
+    .hero-panel { min-height: 340px; display: flex; flex-direction: column; justify-content: space-between; padding: 27px; border: 1px solid #dce5ec; border-radius: 26px; background: rgba(255,255,255,.78); box-shadow: var(--shadow); }
+    .initials { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 22px; background: var(--blue-soft); color: var(--blue); font-family: Manrope,sans-serif; font-size: 1.5rem; font-weight: 800; }
+    .panel-label { color: var(--muted); font-size: .75rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .panel-title { margin: 8px 0 0; font-family: Manrope,sans-serif; font-size: 1.55rem; line-height: 1.25; letter-spacing: -.04em; }
+    .panel-note { margin: 13px 0 0; color: var(--muted); font-size: .9rem; }
+    .quick-facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .chip { display: inline-flex; padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; background: white; color: #536172; font-size: .78rem; font-weight: 600; }
+    section { padding: 82px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 34px; }
+    .section-kicker { color: var(--blue); font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: .15em; }
+    h2 { margin: 9px 0 0; font-family: Manrope,sans-serif; font-size: clamp(2rem,4vw,3rem); line-height: 1.15; letter-spacing: -.055em; }
+    .section-intro { max-width: 510px; margin: 0; color: var(--muted); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .card { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); box-shadow: 0 8px 26px rgba(32,43,56,.035); }
+    .card h3 { margin-bottom: 12px; font-family: Manrope,sans-serif; font-size: 1.15rem; letter-spacing: -.025em; }
+    .card p { margin-bottom: 0; color: var(--muted); }
+    .focus-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+    .focus-item { padding: 13px 14px; border-radius: 12px; background: #f4f7f9; color: #405164; font-size: .88rem; font-weight: 600; }
+    .experience-section { background: #f0f3f6; }
+    .experience-list { display: grid; gap: 16px; }
+    .experience-card { display: grid; grid-template-columns: 220px 1fr; gap: 28px; padding: 25px 27px; border: 1px solid #e1e6eb; border-radius: 18px; background: white; }
+    .experience-meta { color: var(--muted); font-size: .84rem; }
+    .experience-meta strong { display: block; margin-bottom: 7px; color: var(--blue); font-family: Manrope,sans-serif; font-size: 1.02rem; }
+    .experience-body h3 { margin: 0 0 8px; font-family: Manrope,sans-serif; font-size: 1.16rem; }
+    .experience-body p { margin: 0; color: var(--muted); }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
+    .tag { padding: 5px 9px; border-radius: 7px; background: var(--blue-soft); color: var(--blue-dark); font-size: .72rem; font-weight: 700; }
+    .case-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .case-card { display: flex; flex-direction: column; min-height: 255px; padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: white; transition: .2s ease; }
+    .case-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: #cbd9e4; }
+    .case-number { color: #91a1b1; font-size: .75rem; font-weight: 800; letter-spacing: .12em; }
+    .case-card h3 { margin: 17px 0 9px; font-family: Manrope,sans-serif; font-size: 1.18rem; line-height: 1.35; }
+    .case-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .case-link { margin-top: auto; padding-top: 20px; color: var(--blue); font-size: .85rem; font-weight: 800; }
+    .creative-section { background: #f0f3f6; }
+    .creative-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .creative-card { padding: 30px; border: 1px solid #e0e6eb; border-radius: 20px; background: white; }
+    .creative-card .icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 13px; background: var(--blue-soft); color: var(--blue); font-size: 1.2rem; }
+    .creative-card h3 { margin: 18px 0 9px; font-family: Manrope,sans-serif; font-size: 1.3rem; }
+    .creative-card p { color: var(--muted); }
+    .link-placeholder { display: inline-flex; margin-top: 5px; padding: 9px 13px; border: 1px dashed #b7c6d3; border-radius: 9px; color: var(--blue); font-size: .82rem; font-weight: 700; }
+    .placeholder-note { color: #7b8794; font-size: .8rem; }
+    .recognition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .award { display: flex; align-items: flex-start; gap: 17px; padding: 24px; border: 1px solid var(--line); border-radius: 17px; background: white; }
+    .award-mark { flex: 0 0 46px; width: 46px; height: 46px; display: grid; place-items: center; border-radius: 14px; background: #eef2f5; color: var(--blue); font-size: 1.2rem; }
+    .award h3 { margin: 0 0 5px; font-family: Manrope,sans-serif; font-size: 1rem; }
+    .award p { margin: 0; color: var(--muted); font-size: .87rem; }
+    .education-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 20px; }
+    .education-card { padding: 28px; border-radius: 18px; background: var(--blue-dark); color: white; }
+    .education-card p { color: #d7e2eb; margin-bottom: 0; }
+    .education-card .section-kicker { color: #b8d1e5; }
+    .education-card h3 { margin: 12px 0 8px; font-family: Manrope,sans-serif; font-size: 1.35rem; }
+    .reserved-card { padding: 28px; border: 1px dashed #bdc9d3; border-radius: 18px; background: white; }
+    .reserved-card p { color: var(--muted); margin-bottom: 0; }
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill { padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; background: white; color: #465567; font-size: .88rem; font-weight: 600; }
+    .contact-section { background: var(--blue-dark); color: white; }
+    .contact-section .section-kicker { color: #b8d1e5; }
+    .contact-section h2 { max-width: 650px; }
+    .contact-section p { max-width: 560px; color: #d4dfe8; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+    .contact-section .btn { background: white; border-color: white; color: var(--blue-dark); }
+    .contact-section .btn.secondary { background: transparent; color: white; border-color: rgba(255,255,255,.5); }
+    footer { padding: 22px 0; background: #1b394f; color: #c5d2dc; font-size: .82rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .modal { position: fixed; inset: 0; z-index: 50; display: none; align-items: center; justify-content: center; padding: 22px; background: rgba(17,29,40,.65); }
+    .modal.open { display: flex; }
+    .modal-box { position: relative; width: min(760px,100%); max-height: 88vh; overflow-y: auto; padding: 36px; border-radius: 20px; background: white; box-shadow: 0 24px 80px rgba(0,0,0,.2); }
+    .modal-box h2 { padding-right: 40px; margin-bottom: 18px; font-size: 1.8rem; }
+    .modal-box p { color: var(--muted); }
+    .modal-box h3 { margin: 25px 0 8px; font-family: Manrope,sans-serif; font-size: 1.05rem; }
+    .modal-box ul { padding-left: 21px; color: var(--muted); }
+    .modal-box li { margin-bottom: 8px; }
+    .modal-close { position: absolute; top: 16px; right: 18px; width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 50%; background: white; color: var(--ink); font-size: 1.3rem; cursor: pointer; }
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 35px; }
+      .hero-panel { min-height: 270px; }
+      .case-grid { grid-template-columns: 1fr 1fr; }
+      .experience-card { grid-template-columns: 1fr; gap: 12px; }
     }
-
-    body {
-      background: #f8f5ef;
-      color: #403b36;
-      font-family: 'DM Sans', sans-serif;
-      line-height: 1.8;
-    }
-
-    header {
-      padding: 24px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #e8e0d6;
-    }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      color: #594b47;
-    }
-
-    nav {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: #71655e;
-      text-decoration: none;
-      font-size: 12px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ad7880;
-    }
-
-    .hero {
-      min-height: 80vh;
-      padding: 110px 12%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background:
-        radial-gradient(ellipse at 90% 35%, #ead9d5 0%, transparent 35%),
-        #f8f5ef;
-    }
-
-    .eyebrow {
-      color: #a56f78;
-      letter-spacing: 3px;
-      font-size: 11px;
-      text-transform: uppercase;
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(52px, 8vw, 94px);
-      font-weight: 400;
-      line-height: 1.12;
-      letter-spacing: -2px;
-      max-width: 850px;
-      color: #51433e;
-    }
-
-    .intro {
-      max-width: 490px;
-      margin-top: 28px;
-      color: #766c64;
-      font-size: 15px;
-    }
-
-    .hero-link {
-      display: inline-block;
-      margin-top: 35px;
-      color: #99646d;
-      text-decoration: none;
-      border-bottom: 1px solid #99646d;
-      width: fit-content;
-      padding-bottom: 5px;
-      font-size: 13px;
-    }
-
-    section {
-      padding: 100px 12%;
-      border-top: 1px solid #e8e0d6;
-    }
-
-    .section-label {
-      color: #a56f78;
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(36px, 5vw, 54px);
-      font-weight: 400;
-      margin-bottom: 22px;
-      color: #51433e;
-    }
-
-    .section-text {
-      max-width: 650px;
-      color: #766c64;
-      font-size: 15px;
-    }
-
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-      margin-top: 40px;
-    }
-
-    .work-card {
-      padding: 38px 32px;
-      background: #eee8df;
-      min-height: 180px;
-      border-radius: 3px;
-      transition: transform 0.3s;
-    }
-
-    .work-card:nth-child(2) {
-      background: #eee1df;
-    }
-
-    .work-card:nth-child(3) {
-      background: #e8ebe2;
-    }
-
-    .work-card:nth-child(4) {
-      background: #eee9df;
-    }
-
-    .work-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .work-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 25px;
-      font-weight: 400;
-      margin-bottom: 12px;
-      color: #594b47;
-    }
-
-    .work-card p {
-      color: #766c64;
-      font-size: 13px;
-    }
-
-    .social-links {
-      margin-top: 30px;
-    }
-
-    .social-links a {
-      color: #99646d;
-      margin-right: 24px;
-      text-decoration: none;
-      font-size: 13px;
-    }
-
-    footer {
-      padding: 30px 12%;
-      color: #887f75;
-      font-size: 12px;
-      border-top: 1px solid #e8e0d6;
-    }
-
-    @media (max-width: 650px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 14px;
-      }
-
-      .hero {
-        padding: 85px 8%;
-        min-height: 70vh;
-      }
-
-      section {
-        padding: 70px 8%;
-      }
-
-      .work-grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 640px) {
+      .container { width: min(var(--max), calc(100% - 32px)); }
+      .nav { min-height: 68px; }
+      .menu-toggle { display: block; }
+      .nav-links { position: absolute; top: 68px; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 22px 18px; border-bottom: 1px solid var(--line); background: var(--paper); }
+      .nav-links.show { display: flex; }
+      .nav-links a { padding: 10px 0; }
+      .hero { padding: 65px 0 55px; }
+      section { padding: 62px 0; }
+      .section-head { display: block; }
+      .section-intro { margin-top: 15px; }
+      .about-grid,.creative-grid,.recognition-grid,.education-grid { grid-template-columns: 1fr; }
+      .focus-list { grid-template-columns: 1fr; }
+      .case-grid { grid-template-columns: 1fr; }
+      .experience-card { padding: 22px; }
+      .modal-box { padding: 27px 22px; }
+      .footer-inner { display: block; }
     }
   </style>
 </head>
-
 <body>
-
-  <header>
-    <div class="logo">Mahmuda Urmi.</div>
-
-    <nav>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#creative">Creative Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home">Mahmuda <span>Urmi.</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#content">Content</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-
-    <section class="hero">
-      <p class="eyebrow">Communication · Creativity · Curiosity</p>
-
-      <h1>Communicator.<br>Storyteller.<br>Curious mind.</h1>
-
-      <p class="intro">
-        Exploring the space between communication, public relations,
-        creative thinking and meaningful storytelling.
-      </p>
-
-      <a class="hero-link" href="#about">
-        A little more about me ↓
-      </a>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Communication · Public Relations · Content</span>
+          <h1>Communicator.<br><em>Storyteller.</em><br>Curious mind.</h1>
+          <p class="hero-copy">I am Mahmuda Urmi, a communication and public relations professional interested in the stories, people and ideas that shape how we connect. My work brings together community management, strategic communication, content development, media relations and team leadership.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#case-studies">Explore my work <span>↗</span></a>
+            <a class="btn secondary" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <div class="initials">MU</div>
+          <div>
+            <div class="panel-label">A little about my work</div>
+            <h2 class="panel-title">People-first communication with purpose.</h2>
+            <p class="panel-note">From managing brand conversations to building teams and shaping stories, I enjoy turning ideas into meaningful communication.</p>
+            <div class="quick-facts">
+              <span class="chip">Public Relations</span>
+              <span class="chip">Community Management</span>
+              <span class="chip">Content Strategy</span>
+              <span class="chip">Storytelling</span>
+            </div>
+          </div>
+        </aside>
+      </div>
     </section>
 
     <section id="about">
-      <p class="section-label">01 / A little introduction</p>
-
-      <h2>Hello, I'm Urmi.</h2>
-
-      <p class="section-text">
-        I'm interested in how people connect, how stories shape perspectives,
-        and how thoughtful communication can make a difference.
-        This is a growing collection of my experiences, ideas and work.
-      </p>
-    </section>
-
-    <section id="experience">
-      <p class="section-label">02 / What I've explored</p>
-
-      <h2>My professional world.</h2>
-
-      <div class="work-grid">
-
-        <div class="work-card">
-          <h3>Communication & PR</h3>
-          <p>
-            Public relations, community management and brand reputation.
-          </p>
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">About me</div><h2>Communication is<br>more than words.</h2></div>
+          <p class="section-intro">I am interested in how people, organisations and communities communicate, build trust and create impact.</p>
         </div>
-
-        <div class="work-card">
-          <h3>Leadership & Community</h3>
-          <p>
-            Team leadership, collaboration and community engagement.
-          </p>
+        <div class="about-grid">
+          <article class="card">
+            <h3>My perspective</h3>
+            <p>My experience spans corporate community management, public relations, media coordination, content strategy, research and team leadership. I enjoy understanding different perspectives, identifying what matters and communicating it with clarity and purpose. I value thoughtful storytelling, practical problem-solving and work that creates meaningful connections.</p>
+          </article>
+          <article class="card">
+            <h3>Areas I enjoy working in</h3>
+            <p>I am especially drawn to roles that combine communication, creativity, analysis and collaboration.</p>
+            <div class="focus-list">
+              <div class="focus-item">Strategic Communication</div>
+              <div class="focus-item">Public Relations</div>
+              <div class="focus-item">Digital Reputation</div>
+              <div class="focus-item">Content Strategy</div>
+              <div class="focus-item">Media Relations</div>
+              <div class="focus-item">Social Listening</div>
+            </div>
+          </article>
         </div>
-
-        <div class="work-card">
-          <h3>Content & Storytelling</h3>
-          <p>
-            Writing, creative concepts and strategic content development.
-          </p>
-        </div>
-
-        <div class="work-card">
-          <h3>Research & Journalism</h3>
-          <p>
-            Exploring people, perspectives and stories through research.
-          </p>
-        </div>
-
       </div>
     </section>
 
-    <section id="creative">
-      <p class="section-label">03 / My creative side</p>
-
-      <h2>Content creation.</h2>
-
-      <p class="section-text">
-        A space for the things I create, the ideas I experiment with,
-        and the stories I enjoy bringing to life.
-      </p>
-
-      <div class="social-links">
-        <a href="#" target="_blank">Instagram ↗</a>
-        <a href="#" target="_blank">Facebook ↗</a>
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Professional journey</div><h2>Experience &<br>contributions.</h2></div>
+          <p class="section-intro">A range of roles that have shaped my experience in communication, leadership, content and research.</p>
+        </div>
+        <div class="experience-list">
+          <article class="experience-card">
+            <div class="experience-meta"><strong>ACI Logistics Limited (Shwapno)</strong>November 2024 to Present<br>Dhaka, Bangladesh · On-site</div>
+            <div class="experience-body"><h3>Supervisor, Community Management</h3><p>Oversee community management operations, customer communication and digital brand reputation. Lead a six-member team, coordinate cross-functional issue resolution, monitor public conversations and present customer insights and management reports.</p><div class="tag-row"><span class="tag">Team Leadership</span><span class="tag">Social Listening</span><span class="tag">Customer Experience</span><span class="tag">Reputation Management</span></div></div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-meta"><strong>ULAB Radio CampBuzz</strong>June 2021 to August 2024<br>Dhaka, Bangladesh</div>
+            <div class="experience-body"><h3>Station Manager</h3><p>Led an eight-member executive team and guided approximately 50 members across eight functional departments. Oversaw station operations, organisational restructuring, workshops, creative programming, brand presence and external collaborations.</p><div class="tag-row"><span class="tag">Leadership</span><span class="tag">Team Development</span><span class="tag">Creative Direction</span><span class="tag">Organisational Development</span></div></div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-meta"><strong>Hult Prize at ULAB</strong>November 2023 to February 2024<br>Dhaka, Bangladesh</div>
+            <div class="experience-body"><h3>Head of Public Relations</h3><p>Led media relations and publicity coordination, built relationships with media outlets including Somoy TV and The Business Standard, supervised press release preparation and represented the event in media engagements.</p><div class="tag-row"><span class="tag">Media Relations</span><span class="tag">Publicity</span><span class="tag">Editorial Oversight</span></div></div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-meta"><strong>Verve Productions</strong>January 2023 to Present<br>Dhaka, Bangladesh · Hybrid</div>
+            <div class="experience-body"><h3>Content Writer · Freelance</h3><p>Contribute written content for creative and communication projects. Selected write-ups and related content samples can be added to the portfolio gallery.</p><div class="tag-row"><span class="tag">Content Writing</span><span class="tag">Storytelling</span></div></div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-meta"><strong>Silver Fox Toady</strong>March 2024 to August 2024<br>Dhaka, Bangladesh · Hybrid</div>
+            <div class="experience-body"><h3>Content Strategist · Contract</h3><p>Oversaw editorial planning, selected news stories and guided the graphics team on visual presentation. Reviewed final graphics and coordinated inbound collaborations with organisations and socially recognised individuals from initial communication through publication.</p><div class="tag-row"><span class="tag">Editorial Planning</span><span class="tag">Content Strategy</span><span class="tag">Collaboration</span></div></div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-meta"><strong>Digital Marketing Solution (Pvt.) Ltd.</strong>March 2023 to February 2024<br>Dhaka, Bangladesh · On-site</div>
+            <div class="experience-body"><h3>Content Creator · Video Presenter</h3><p>Worked as an on-camera video presenter for two video projects created for Matrimony Bangladesh.</p><div class="tag-row"><span class="tag">Video Presentation</span><span class="tag">Content Creation</span></div></div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-meta"><strong>The Business Standard</strong>June 2023 to December 2023<br>Dhaka, Bangladesh · Hybrid</div>
+            <div class="experience-body"><h3>Campus Reporter · Apprenticeship</h3><p>Supported campus-related news and event collaborations, helping facilitate coordination between the university community and The Business Standard.</p><div class="tag-row"><span class="tag">Campus Journalism</span><span class="tag">News Coordination</span></div></div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-meta"><strong>The Business Standard</strong>December 2022 to December 2023<br>Dhaka, Bangladesh</div>
+            <div class="experience-body"><h3>EDGE Associate</h3><p>Contributed to campus-related news and event collaboration activities, supporting communication and coordination between university stakeholders and the media platform.</p><div class="tag-row"><span class="tag">Communication</span><span class="tag">Event Collaboration</span></div></div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-meta"><strong>PriyoShop</strong>April 2023 to July 2023<br>Dhaka, Bangladesh · On-site</div>
+            <div class="experience-body"><h3>Executive Assistant to CEO · Internship</h3><p>Supported administrative coordination, meeting arrangements, communication and follow-ups to assist executive office operations.</p><div class="tag-row"><span class="tag">Administration</span><span class="tag">Executive Support</span></div></div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-meta"><strong>Project Ujjibon</strong>August 2018 to January 2019<br>Dhaka, Bangladesh · On-site</div>
+            <div class="experience-body"><h3>Field Research Assistant</h3><p>Supported field research through surveys, interviews, field visits, on-site data collection and community engagement.</p><div class="tag-row"><span class="tag">Field Research</span><span class="tag">Data Collection</span></div></div>
+          </article>
+          <article class="experience-card">
+            <div class="experience-meta"><strong>icddr,b</strong>January 2017 to January 2018<br>Dhaka, Bangladesh · On-site</div>
+            <div class="experience-body"><h3>Field Research Assistant</h3><p>Assisted research activities through field visits, surveys, interviews and on-site data collection.</p><div class="tag-row"><span class="tag">Research</span><span class="tag">Fieldwork</span></div></div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="contact">
-      <p class="section-label">04 / Let's connect</p>
-
-      <h2>Have something in mind?</h2>
-
-      <p class="section-text">
-        I'd love to connect, exchange ideas and explore opportunities.
-      </p>
-
-      <a class="hero-link" href="mailto:mahmudaurmi7@gmail.com">
-        Get in touch ↗
-      </a>
+    <section id="case-studies">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Selected work</div><h2>Stories behind<br>the experience.</h2></div>
+          <p class="section-intro">A closer look at three experiences that reflect how I approach communication, leadership and public engagement.</p>
+        </div>
+        <div class="case-grid">
+          <button class="case-card" data-case="shwapno" style="text-align:left;cursor:pointer">
+            <span class="case-number">01 / CORPORATE COMMUNICATION</span>
+            <h3>Brand Communication, Community Management & Digital Reputation</h3>
+            <p>Turning customer conversations into insights, coordinating issue resolution and supporting a consistent brand experience.</p>
+            <span class="case-link">Explore case study ↗</span>
+          </button>
+          <button class="case-card" data-case="campbuzz" style="text-align:left;cursor:pointer">
+            <span class="case-number">02 / LEADERSHIP & ORGANISATIONAL DEVELOPMENT</span>
+            <h3>Building Teams, Developing Talent & Shaping Campus Radio</h3>
+            <p>Leading a diverse team, strengthening organisational structures and creating space for people and ideas to grow.</p>
+            <span class="case-link">Explore case study ↗</span>
+          </button>
+          <button class="case-card" data-case="hult" style="text-align:left;cursor:pointer">
+            <span class="case-number">03 / PUBLIC RELATIONS & MEDIA</span>
+            <h3>Building Media Relations & Expanding Public Visibility</h3>
+            <p>Developing media relationships, coordinating publicity and strengthening the public presence of a major campus initiative.</p>
+            <span class="case-link">Explore case study ↗</span>
+          </button>
+        </div>
+      </div>
     </section>
 
+    <section class="creative-section" id="content">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Content & creativity</div><h2>Ideas, stories<br>& things I create.</h2></div>
+          <p class="section-intro">A space for selected professional projects and personal creative work. Video links, write-ups and published content can be added here.</p>
+        </div>
+        <div class="creative-grid">
+          <article class="creative-card">
+            <div class="icon">✦</div>
+            <h3>Professional Content & Projects</h3>
+            <p>Selected content writing, editorial projects, campaign work, video presentations and communication samples from professional engagements.</p>
+            <span class="link-placeholder">Project links to be added</span>
+            <p class="placeholder-note">This gallery can include a title, thumbnail, original link and a short description for each project.</p>
+          </article>
+          <article class="creative-card">
+            <div class="icon">✧</div>
+            <h3>Personal Content & Creative Work</h3>
+            <p>A collection of personal videos, creative experiments, storytelling and content that reflects my interests and individual voice.</p>
+            <span class="link-placeholder">Social links to be added</span>
+            <p class="placeholder-note">Selected posts and videos can be linked directly to their original platforms.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="recognition">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Recognition</div><h2>Milestones worth<br>remembering.</h2></div>
+          <p class="section-intro">Recognition that reflects the people, teamwork and responsibilities behind these experiences.</p>
+        </div>
+        <div class="recognition-grid">
+          <article class="award"><div class="award-mark">★</div><div><h3>Best Station Manager Award</h3><p>ULAB Radio CampBuzz</p></div></article>
+          <article class="award"><div class="award-mark">★</div><div><h3>Best Public Relations Head Award</h3><p>Hult Prize at ULAB</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Education & learning</div><h2>Learning is part<br>of the journey.</h2></div>
+          <p class="section-intro">My academic background complements my professional experience and continues to shape how I understand communication and society.</p>
+        </div>
+        <div class="education-grid">
+          <article class="education-card">
+            <div class="section-kicker">Undergraduate studies</div>
+            <h3>University of Liberal Arts Bangladesh (ULAB)</h3>
+            <p>Bachelor's in Media Studies and Journalism<br>Major: Public Relations<br>Currently pursuing</p>
+          </article>
+          <article class="reserved-card">
+            <h3>Academic Projects & Research</h3>
+            <p>A dedicated space for selected academic projects, research papers, presentations and other university work. More details will be added as projects are curated.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Core capabilities</div><h2>What I bring<br>to the table.</h2></div>
+          <p class="section-intro">A combination of communication, people skills, creative thinking and operational experience.</p>
+        </div>
+        <div class="skills">
+          <span class="skill">Strategic Communication</span>
+          <span class="skill">Public Relations</span>
+          <span class="skill">Community Management</span>
+          <span class="skill">Media Relations</span>
+          <span class="skill">Content Strategy</span>
+          <span class="skill">Content Writing</span>
+          <span class="skill">Social Listening</span>
+          <span class="skill">Sentiment Analysis</span>
+          <span class="skill">Digital Reputation Management</span>
+          <span class="skill">Crisis Communication</span>
+          <span class="skill">Team Leadership</span>
+          <span class="skill">Stakeholder Coordination</span>
+          <span class="skill">Editorial Planning</span>
+          <span class="skill">Research & Data Collection</span>
+          <span class="skill">Presentation & Reporting</span>
+          <span class="skill">Workshop Facilitation</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-kicker">Let's connect</div>
+        <h2>Have a story, an idea or an opportunity in mind?</h2>
+        <p>I would love to connect with people and organisations working across communication, public relations, content, storytelling and meaningful impact.</p>
+        <div class="contact-links">
+          <a class="btn" href="mailto:mahmudaurmi7@gmail.com">Email me ↗</a>
+          <a class="btn secondary" href="#" target="_blank" rel="noopener">LinkedIn profile</a>
+        </div>
+        <p class="placeholder-note" style="margin-top:18px">LinkedIn and other social profile links can be updated here.</p>
+      </div>
+    </section>
   </main>
 
   <footer>
-    © 2026 Mahmuda Urmi. Made with curiosity and care.
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Mahmuda Urmi. All rights reserved.</span>
+      <span>Communicator. Storyteller. Curious mind.</span>
+    </div>
   </footer>
 
+  <div class="modal" id="caseModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="closeModal" aria-label="Close case study">×</button>
+      <h2 id="modalTitle"></h2>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script>
+    const caseStudies = {
+      shwapno: {
+        title: "Brand Communication, Community Management & Digital Reputation",
+        intro: "At Shwapno, I oversee community management operations with a focus on customer experience, digital brand reputation and effective communication. My role brings together team leadership, cross-channel issue management, social listening, stakeholder coordination and management reporting. Working across strategic and operational responsibilities, I help translate customer conversations into actionable insights while ensuring that concerns are appropriately investigated and followed through to resolution.",
+        sections: [
+          ["Community Management & Team Leadership", ["Directly supervise a six-member team and oversee daily priorities, workload distribution and service quality.", "Maintain consistent customer communication and response standards.", "Support team coordination and operational efficiency."]],
+          ["Cross-Channel Issue Management & Resolution", ["Oversee customer and employee-related concerns across official and unofficial digital channels, including product-related and employee-related issues.", "Coordinate with relevant departments and stakeholders to facilitate investigations.", "Conduct or review root cause analysis depending on the severity and sensitivity of each issue, and monitor corrective actions through resolution."]],
+          ["Social Listening & Customer Sentiment Analysis", ["Monitor customer conversations and public discussions across digital platforms.", "Identify recurring concerns, product-related issues and potential brand reputation risks.", "Analyse sentiment and discussion patterns to generate actionable insights."]],
+          ["Management Reporting & Strategic Communication", ["Prepare and present management reports, analytical summaries and presentations based on customer feedback, complaint patterns, social listening and community management activities.", "Highlight key observations, emerging concerns and relevant insights to support management visibility, informed decision-making and service improvement."]],
+          ["Response Strategy & Process Improvement", ["Develop, review and update standardised response templates for promotional offers and customer queries.", "Ensure accuracy, consistency and alignment with brand communication standards.", "Refine response practices in line with changing offers, policies and customer communication needs."]],
+          ["Cross-Functional & Senior Stakeholder Coordination", ["Coordinate with senior management, department heads and cross-functional stakeholders on customer escalations, brand reputation concerns and operational issues.", "Communicate findings, highlight risks and provide updates to support timely resolution.", "Exercise operational judgement while consulting the reporting manager on sensitive, high-impact or strategic matters."]]
+        ]
+      },
+      campbuzz: {
+        title: "Building Teams, Developing Talent & Shaping Campus Radio",
+        intro: "My journey as Station Manager at ULAB Radio CampBuzz was an opportunity to explore leadership beyond conventional team management. I was responsible for overseeing station operations, guiding a diverse team, developing creative programming and strengthening the station's identity and community presence. Working with eight executive team members and approximately 50 members across eight functional departments, I focused on building a collaborative environment where people could develop their skills, contribute ideas and take ownership of their responsibilities.",
+        sections: [
+          ["Leadership & Team Development", ["Led an eight-member executive leadership team, guiding department heads in managing their respective teams across eight functional departments.", "Mentored members, facilitated conflict resolution, encouraged participation and supported individual skill development.", "Designed and conducted workshops and grooming sessions to strengthen team capabilities and collaboration."]],
+          ["Organisational Development & Operational Restructuring", ["Refined departmental responsibilities and redefined leadership roles.", "Established clearer reporting and coordination systems and improved operational workflows.", "Strengthened recruitment, onboarding and member development processes."]],
+          ["Training, Workshops & Capacity Building", ["Designed and facilitated workshops on RJ skills, news presentation, organisational behaviour and team orientation.", "Helped members strengthen broadcasting abilities, workplace communication, teamwork and understanding of organisational culture."]],
+          ["Programme Development & Creative Direction", ["Collaborated with team members to conceptualise and develop formats and structures for Murder & Mystery, InformationBuzz, Storytelling, Icon, and Plan, Pack & Travel.", "Guided creative development, encouraged collaborative ideation and expanded the station's programming with diverse content formats."]],
+          ["Brand Management & Audience Engagement", ["Monitored and supervised CampBuzz's digital presence, promotional activities and audience engagement initiatives.", "Guided promotional efforts and helped strengthen the station's connection with the university community."]],
+          ["External Partnerships & Stakeholder Engagement", ["Supervised external communication and partnership activities, providing direct leadership and stakeholder coordination when required.", "Represented CampBuzz in relevant engagements and supported relationship-building with external organisations, media and event partners."]],
+          ["Leadership Philosophy & Personal Growth", ["Combined Transformational and Laissez-faire leadership by motivating team members, encouraging creativity and individual growth, while giving department heads autonomy and ownership.", "Learned to navigate difficult decisions, delegate thoughtfully, manage conflict and recognise when to guide or step in.", "Focused on creating an environment where people could grow, contribute and take ownership."]]
+        ]
+      },
+      hult: {
+        title: "Building Media Relations & Expanding Public Visibility",
+        intro: "As Head of Public Relations at Hult Prize at ULAB, I worked on strengthening the event's public presence through media outreach, relationship-building and publicity coordination. Working closely with a sub-executive, I personally handled media communication and relationship development while supervising press release preparation and coordinating publicity activities. My focus was to build meaningful media connections and secure opportunities for the event to reach a wider audience.",
+        sections: [
+          ["Media Relations & Partnership Development", ["Led public relations activities in collaboration with a sub-executive.", "Established and maintained media relationships with outlets including Somoy TV and The Business Standard.", "Coordinated directly with media representatives to facilitate press coverage, PR publication and news features."]],
+          ["Media Outreach & Publicity Coordination", ["Identified relevant media outlets and led targeted media outreach for Hult Prize at ULAB.", "Personally communicated with media representatives, coordinated PR submissions and news coverage, and supported publicity planning."]],
+          ["PR Content Supervision & Editorial Oversight", ["Supervised press releases prepared by the sub-executive.", "Reviewed content for accuracy, clarity, messaging consistency and alignment with event communication objectives.", "Coordinated media outreach and supported publication of PR content across relevant platforms."]],
+          ["Event Representation & Media Engagement", ["Represented Hult Prize at ULAB in relevant media and event engagements.", "Facilitated communication with journalists and media representatives and supported interview coordination and publicity activities."]],
+          ["Leadership & Professional Contribution", ["Worked closely with a sub-executive to coordinate PR responsibilities.", "Contributed to the event's public visibility through media relationship-building, editorial oversight and coordinated publicity."]]
+        ]
+      }
+    };
+
+    const modal = document.getElementById("caseModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalContent = document.getElementById("modalContent");
+    document.querySelectorAll("[data-case]").forEach(button => {
+      button.addEventListener("click", () => {
+        const data = caseStudies[button.dataset.case];
+        modalTitle.textContent = data.title;
+        modalContent.innerHTML = `<p>${data.intro}</p>` + data.sections.map(([heading, items]) => `<h3>${heading}</h3><ul>${items.map(item => `<li>${item}</li>`).join("")}</ul>`).join("");
+        modal.classList.add("open");
+        document.body.style.overflow = "hidden";
+      });
+    });
+    function closeModal() { modal.classList.remove("open"); document.body.style.overflow = ""; }
+    document.getElementById("closeModal").addEventListener("click", closeModal);
+    modal.addEventListener("click", event => { if (event.target === modal) closeModal(); });
+    document.addEventListener("keydown", event => { if (event.key === "Escape") closeModal(); });
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    menuToggle.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("show");
+      menuToggle.setAttribute("aria-expanded", String(open));
+    });
+    navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }));
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
