@@ -9,6 +9,10 @@
 
   <meta name="description" content="The personal portfolio of Mahmuda Urmi, exploring communication, public relations, content and storytelling.">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -16,15 +20,19 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #f8f5ef;
       color: #403b36;
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.8;
     }
 
     header {
-      padding: 25px 8%;
+      padding: 24px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,32 +40,37 @@
     }
 
     .logo {
-      font-family: Georgia, serif;
-      font-size: 24px;
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: #594b47;
     }
 
     nav {
       display: flex;
-      gap: 24px;
+      gap: 25px;
       flex-wrap: wrap;
     }
 
     nav a {
-      color: #625b54;
+      color: #71655e;
       text-decoration: none;
-      font-size: 13px;
+      font-size: 12px;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #a56f78;
+      color: #ad7880;
     }
 
     .hero {
-      min-height: 75vh;
-      padding: 100px 12%;
+      min-height: 80vh;
+      padding: 110px 12%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      background:
+        radial-gradient(ellipse at 90% 35%, #ead9d5 0%, transparent 35%),
+        #f8f5ef;
     }
 
     .eyebrow {
@@ -69,84 +82,113 @@
     }
 
     h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(48px, 8vw, 88px);
-      font-weight: normal;
-      line-height: 1.1;
-      max-width: 800px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(52px, 8vw, 94px);
+      font-weight: 400;
+      line-height: 1.12;
+      letter-spacing: -2px;
+      max-width: 850px;
+      color: #51433e;
     }
 
     .intro {
-      max-width: 520px;
-      margin-top: 25px;
-      color: #756d65;
-      font-size: 16px;
+      max-width: 490px;
+      margin-top: 28px;
+      color: #766c64;
+      font-size: 15px;
     }
 
     .hero-link {
       display: inline-block;
       margin-top: 35px;
-      color: #8c5964;
+      color: #99646d;
       text-decoration: none;
-      border-bottom: 1px solid #8c5964;
+      border-bottom: 1px solid #99646d;
       width: fit-content;
       padding-bottom: 5px;
+      font-size: 13px;
     }
 
     section {
-      padding: 85px 12%;
+      padding: 100px 12%;
       border-top: 1px solid #e8e0d6;
     }
 
     .section-label {
       color: #a56f78;
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     h2 {
-      font-family: Georgia, serif;
-      font-size: 42px;
-      font-weight: normal;
-      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 54px);
+      font-weight: 400;
+      margin-bottom: 22px;
+      color: #51433e;
     }
 
     .section-text {
       max-width: 650px;
-      color: #756d65;
+      color: #766c64;
+      font-size: 15px;
     }
 
     .work-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      margin-top: 35px;
+      gap: 22px;
+      margin-top: 40px;
     }
 
     .work-card {
-      padding: 30px;
+      padding: 38px 32px;
       background: #eee8df;
-      min-height: 170px;
+      min-height: 180px;
+      border-radius: 3px;
+      transition: transform 0.3s;
+    }
+
+    .work-card:nth-child(2) {
+      background: #eee1df;
+    }
+
+    .work-card:nth-child(3) {
+      background: #e8ebe2;
+    }
+
+    .work-card:nth-child(4) {
+      background: #eee9df;
+    }
+
+    .work-card:hover {
+      transform: translateY(-5px);
     }
 
     .work-card h3 {
-      font-family: Georgia, serif;
-      font-size: 24px;
-      font-weight: normal;
-      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 12px;
+      color: #594b47;
     }
 
     .work-card p {
-      color: #756d65;
-      font-size: 14px;
+      color: #766c64;
+      font-size: 13px;
+    }
+
+    .social-links {
+      margin-top: 30px;
     }
 
     .social-links a {
-      color: #8c5964;
-      margin-right: 20px;
+      color: #99646d;
+      margin-right: 24px;
       text-decoration: none;
+      font-size: 13px;
     }
 
     footer {
@@ -168,11 +210,12 @@
       }
 
       .hero {
-        padding: 75px 8%;
+        padding: 85px 8%;
+        min-height: 70vh;
       }
 
       section {
-        padding: 65px 8%;
+        padding: 70px 8%;
       }
 
       .work-grid {
@@ -207,12 +250,16 @@
         creative thinking and meaningful storytelling.
       </p>
 
-      <a class="hero-link" href="#about">A little more about me ↓</a>
+      <a class="hero-link" href="#about">
+        A little more about me ↓
+      </a>
     </section>
 
     <section id="about">
       <p class="section-label">01 / A little introduction</p>
+
       <h2>Hello, I'm Urmi.</h2>
+
       <p class="section-text">
         I'm interested in how people connect, how stories shape perspectives,
         and how thoughtful communication can make a difference.
@@ -222,40 +269,53 @@
 
     <section id="experience">
       <p class="section-label">02 / What I've explored</p>
+
       <h2>My professional world.</h2>
 
       <div class="work-grid">
+
         <div class="work-card">
           <h3>Communication & PR</h3>
-          <p>Public relations, community management and brand reputation.</p>
+          <p>
+            Public relations, community management and brand reputation.
+          </p>
         </div>
 
         <div class="work-card">
           <h3>Leadership & Community</h3>
-          <p>Team leadership, collaboration and community engagement.</p>
+          <p>
+            Team leadership, collaboration and community engagement.
+          </p>
         </div>
 
         <div class="work-card">
           <h3>Content & Storytelling</h3>
-          <p>Writing, creative concepts and strategic content development.</p>
+          <p>
+            Writing, creative concepts and strategic content development.
+          </p>
         </div>
 
         <div class="work-card">
           <h3>Research & Journalism</h3>
-          <p>Exploring people, perspectives and stories through research.</p>
+          <p>
+            Exploring people, perspectives and stories through research.
+          </p>
         </div>
+
       </div>
     </section>
 
     <section id="creative">
       <p class="section-label">03 / My creative side</p>
+
       <h2>Content creation.</h2>
+
       <p class="section-text">
         A space for the things I create, the ideas I experiment with,
         and the stories I enjoy bringing to life.
       </p>
 
-      <div class="social-links" style="margin-top: 25px;">
+      <div class="social-links">
         <a href="#" target="_blank">Instagram ↗</a>
         <a href="#" target="_blank">Facebook ↗</a>
       </div>
@@ -263,10 +323,13 @@
 
     <section id="contact">
       <p class="section-label">04 / Let's connect</p>
+
       <h2>Have something in mind?</h2>
+
       <p class="section-text">
         I'd love to connect, exchange ideas and explore opportunities.
       </p>
+
       <a class="hero-link" href="mailto:mahmudaurmi7@gmail.com">
         Get in touch ↗
       </a>
