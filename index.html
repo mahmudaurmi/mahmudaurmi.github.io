@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mahmuda Urmi | Portfolio</title>
+
+  <meta name="description" content="The personal portfolio of Mahmuda Urmi, exploring communication, public relations, content and storytelling.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f8f5ef;
+      color: #403b36;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e8e0d6;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 24px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #625b54;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      color: #a56f78;
+    }
+
+    .hero {
+      min-height: 75vh;
+      padding: 100px 12%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      color: #a56f78;
+      letter-spacing: 3px;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(48px, 8vw, 88px);
+      font-weight: normal;
+      line-height: 1.1;
+      max-width: 800px;
+    }
+
+    .intro {
+      max-width: 520px;
+      margin-top: 25px;
+      color: #756d65;
+      font-size: 16px;
+    }
+
+    .hero-link {
+      display: inline-block;
+      margin-top: 35px;
+      color: #8c5964;
+      text-decoration: none;
+      border-bottom: 1px solid #8c5964;
+      width: fit-content;
+      padding-bottom: 5px;
+    }
+
+    section {
+      padding: 85px 12%;
+      border-top: 1px solid #e8e0d6;
+    }
+
+    .section-label {
+      color: #a56f78;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: 42px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .section-text {
+      max-width: 650px;
+      color: #756d65;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .work-card {
+      padding: 30px;
+      background: #eee8df;
+      min-height: 170px;
+    }
+
+    .work-card h3 {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .work-card p {
+      color: #756d65;
+      font-size: 14px;
+    }
+
+    .social-links a {
+      color: #8c5964;
+      margin-right: 20px;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 30px 12%;
+      color: #887f75;
+      font-size: 12px;
+      border-top: 1px solid #e8e0d6;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .hero {
+        padding: 75px 8%;
+      }
+
+      section {
+        padding: 65px 8%;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Mahmuda Urmi.</div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#creative">Creative Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <p class="eyebrow">Communication · Creativity · Curiosity</p>
+
+      <h1>Communicator.<br>Storyteller.<br>Curious mind.</h1>
+
+      <p class="intro">
+        Exploring the space between communication, public relations,
+        creative thinking and meaningful storytelling.
+      </p>
+
+      <a class="hero-link" href="#about">A little more about me ↓</a>
+    </section>
+
+    <section id="about">
+      <p class="section-label">01 / A little introduction</p>
+      <h2>Hello, I'm Urmi.</h2>
+      <p class="section-text">
+        I'm interested in how people connect, how stories shape perspectives,
+        and how thoughtful communication can make a difference.
+        This is a growing collection of my experiences, ideas and work.
+      </p>
+    </section>
+
+    <section id="experience">
+      <p class="section-label">02 / What I've explored</p>
+      <h2>My professional world.</h2>
+
+      <div class="work-grid">
+        <div class="work-card">
+          <h3>Communication & PR</h3>
+          <p>Public relations, community management and brand reputation.</p>
+        </div>
+
+        <div class="work-card">
+          <h3>Leadership & Community</h3>
+          <p>Team leadership, collaboration and community engagement.</p>
+        </div>
+
+        <div class="work-card">
+          <h3>Content & Storytelling</h3>
+          <p>Writing, creative concepts and strategic content development.</p>
+        </div>
+
+        <div class="work-card">
+          <h3>Research & Journalism</h3>
+          <p>Exploring people, perspectives and stories through research.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="creative">
+      <p class="section-label">03 / My creative side</p>
+      <h2>Content creation.</h2>
+      <p class="section-text">
+        A space for the things I create, the ideas I experiment with,
+        and the stories I enjoy bringing to life.
+      </p>
+
+      <div class="social-links" style="margin-top: 25px;">
+        <a href="#" target="_blank">Instagram ↗</a>
+        <a href="#" target="_blank">Facebook ↗</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <p class="section-label">04 / Let's connect</p>
+      <h2>Have something in mind?</h2>
+      <p class="section-text">
+        I'd love to connect, exchange ideas and explore opportunities.
+      </p>
+      <a class="hero-link" href="mailto:mahmudaurmi7@gmail.com">
+        Get in touch ↗
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Mahmuda Urmi. Made with curiosity and care.
+  </footer>
+
+</body>
+</html>
