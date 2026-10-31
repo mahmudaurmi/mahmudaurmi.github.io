@@ -2,853 +2,545 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mahmuda Urmi | Communication, Public Relations, Content Strategy and Storytelling">
-  <title>Mahmuda Urmi | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --navy: #142d4e;
-      --blue: #2765a0;
-      --light-blue: #edf4fb;
-      --ink: #253348;
-      --muted: #68778a;
-      --white: #ffffff;
-      --line: #e5ebf1;
-      --bg: #f8fafc;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mahmuda Urmi | Communication, Public Relations, Content Strategy and Storytelling">
+<title>Mahmuda Urmi | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      color: var(--ink);
-      background: var(--bg);
-      line-height: 1.7;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1120px, 90%); margin: auto; }
+<style>
+:root {
+  --navy:#142d4e;
+  --blue:#2765a0;
+  --light:#edf4fb;
+  --ink:#253348;
+  --muted:#68778a;
+  --white:#fff;
+  --line:#e5ebf1;
+  --bg:#f8fafc;
+}
+* {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
+body {font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+a {color:inherit;text-decoration:none}
+.container {width:min(1120px,90%);margin:auto}
+header {position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+nav {min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo {color:var(--navy);font-weight:700;font-size:20px}
+.nav-links {display:flex;gap:23px;list-style:none}
+.nav-links a {color:var(--muted);font-size:13px;font-weight:600}
+.nav-links a:hover {color:var(--blue)}
+.menu-btn {display:none;background:none;border:0;font-size:25px;color:var(--navy);cursor:pointer}
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255,255,255,.96);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(10px);
-    }
-    nav {
-      min-height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .logo {
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: -.5px;
-    }
-    .nav-links { display: flex; gap: 25px; list-style: none; }
-    .nav-links a { color: var(--muted); font-size: 13px; font-weight: 600; }
-    .nav-links a:hover { color: var(--blue); }
-    .menu-btn {
-      display: none;
-      background: none;
-      border: 0;
-      font-size: 25px;
-      color: var(--navy);
-      cursor: pointer;
-    }
+.hero {padding:85px 0;background:white}
+.hero-grid {display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:60px}
+.eyebrow {color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:11px;margin-bottom:16px}
+h1 {font-family:'Playfair Display',serif;color:var(--navy);font-size:clamp(42px,6vw,65px);line-height:1.12;margin-bottom:20px}
+.hero-subtitle {font-size:19px;color:var(--blue);font-weight:600;margin-bottom:16px}
+.hero-description {color:var(--muted);max-width:590px;font-size:15px}
+.hero-actions {display:flex;flex-wrap:wrap;gap:13px;margin-top:28px}
+.btn {display:inline-block;padding:12px 21px;border-radius:6px;font-size:13px;font-weight:700}
+.btn-primary {background:var(--navy);color:white}
+.btn-primary:hover {background:var(--blue)}
+.btn-outline {border:1px solid #cbd6e2;color:var(--navy)}
+.portrait-card {background:var(--light);padding:13px;border-radius:12px;max-width:350px;margin-left:auto}
+.portrait-card img {width:100%;height:390px;object-fit:cover;object-position:center top;border-radius:7px;display:block}
 
-    .hero { padding: 88px 0 75px; background: var(--white); }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.25fr .75fr;
-      align-items: center;
-      gap: 65px;
-    }
-    .eyebrow {
-      color: var(--blue);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 11px;
-      margin-bottom: 18px;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      color: var(--navy);
-      font-size: clamp(42px, 6vw, 65px);
-      line-height: 1.12;
-      margin-bottom: 20px;
-    }
-    .hero-subtitle { font-size: 19px; color: var(--blue); font-weight: 600; margin-bottom: 16px; }
-    .hero-description { color: var(--muted); max-width: 590px; font-size: 15px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
-    .btn {
-      display: inline-block;
-      padding: 12px 21px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 700;
-      transition: .2s;
-    }
-    .btn-primary { background: var(--navy); color: white; }
-    .btn-primary:hover { background: var(--blue); }
-    .btn-outline { border: 1px solid #cbd6e2; color: var(--navy); }
-    .btn-outline:hover { background: var(--light-blue); }
-    .portrait-card {
-      background: var(--light-blue);
-      padding: 13px;
-      border-radius: 12px;
-      max-width: 350px;
-      margin-left: auto;
-    }
-    .portrait-card img {
-      display: block;
-      width: 100%;
-      height: 390px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 7px;
-    }
+section {padding:75px 0}
+.section-heading {margin-bottom:32px}
+.section-heading h2 {font-family:'Playfair Display',serif;font-size:34px;color:var(--navy);margin-bottom:8px}
+.section-heading p {color:var(--muted);font-size:14px;max-width:680px}
+.about-grid {display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about-grid p {color:var(--muted);font-size:15px;margin-bottom:14px}
+.focus-card,.experience-card,.simple-card,.skill-card,.case-card {background:white;border:1px solid var(--line);border-radius:9px}
+.focus-card {padding:26px}
+.focus-card h3 {color:var(--navy);font-size:16px;margin-bottom:15px}
+.focus-list {display:flex;flex-wrap:wrap;gap:9px}
+.tag {background:var(--light);color:var(--blue);padding:7px 11px;border-radius:4px;font-size:12px;font-weight:600}
 
-    section { padding: 76px 0; }
-    .section-heading { margin-bottom: 35px; }
-    .section-heading h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 34px;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-    .section-heading p { color: var(--muted); font-size: 14px; max-width: 650px; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-    .about-grid p { color: var(--muted); font-size: 15px; margin-bottom: 14px; }
-    .focus-card {
-      background: var(--white);
-      padding: 27px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-    }
-    .focus-card h3 { color: var(--navy); font-size: 16px; margin-bottom: 15px; }
-    .focus-list { display: flex; flex-wrap: wrap; gap: 9px; }
-    .tag {
-      background: var(--light-blue);
-      color: var(--blue);
-      border-radius: 4px;
-      padding: 7px 11px;
-      font-size: 12px;
-      font-weight: 600;
-    }
+.experience-section,.content-section {background:white}
+.experience-list {display:grid;gap:16px}
+.experience-card {padding:24px 26px}
+.experience-top {display:flex;justify-content:space-between;gap:18px}
+.experience-card h3 {color:var(--navy);font-size:17px}
+.role {color:var(--blue);font-size:13px;font-weight:700;margin:3px 0 8px}
+.date {color:var(--muted);font-size:12px;white-space:nowrap}
+.experience-card p {color:var(--muted);font-size:13px;margin-top:7px}
+.small-link {color:var(--blue);font-size:12px;font-weight:700;display:inline-block;margin-top:12px}
 
-    .experience-section { background: var(--white); }
-    .experience-list { display: grid; gap: 18px; }
-    .experience-card {
-      padding: 25px 27px;
-      border: 1px solid var(--line);
-      border-radius: 9px;
-      background: white;
-    }
-    .experience-top { display: flex; justify-content: space-between; gap: 20px; }
-    .experience-card h3 { color: var(--navy); font-size: 17px; }
-    .role { color: var(--blue); font-size: 13px; font-weight: 700; margin: 3px 0 8px; }
-    .date { color: var(--muted); font-size: 12px; white-space: nowrap; }
-    .experience-card p { color: var(--muted); font-size: 13px; margin-top: 8px; }
-    .experience-card .small-link { color: var(--blue); font-weight: 700; font-size: 12px; display: inline-block; margin-top: 12px; }
+.case-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.case-card {padding:24px;min-height:245px;display:flex;flex-direction:column}
+.case-number {color:#8ba8c5;font-size:12px;font-weight:700;margin-bottom:17px}
+.case-card h3 {color:var(--navy);font-size:17px;line-height:1.4;margin-bottom:12px}
+.case-card p {color:var(--muted);font-size:13px;flex:1}
+.case-card button {border:0;background:none;color:var(--blue);font-family:inherit;font-size:13px;font-weight:700;text-align:left;cursor:pointer;margin-top:18px}
 
-    .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .case-card {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 9px;
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
-      min-height: 250px;
-    }
-    .case-number { color: #8ba8c5; font-size: 12px; font-weight: 700; margin-bottom: 18px; }
-    .case-card h3 { color: var(--navy); font-size: 18px; line-height: 1.4; margin-bottom: 12px; }
-    .case-card p { color: var(--muted); font-size: 13px; flex: 1; }
-    .case-card button {
-      border: 0;
-      background: none;
-      color: var(--blue);
-      font-family: inherit;
-      font-weight: 700;
-      font-size: 13px;
-      cursor: pointer;
-      text-align: left;
-      margin-top: 20px;
-    }
+.gallery-intro {margin-bottom:38px}
+.gallery-category {margin-top:38px}
+.gallery-category h3 {font-size:20px;color:var(--navy);margin-bottom:5px}
+.gallery-category > p {font-size:13px;color:var(--muted);margin-bottom:18px}
+.gallery-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery-card {background:white;border:1px solid var(--line);border-radius:9px;overflow:hidden;display:flex;flex-direction:column}
+.gallery-visual {height:155px;background:linear-gradient(135deg,#eaf2fa,#d5e3f1);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:35px}
+.gallery-body {padding:20px;display:flex;flex-direction:column;flex:1}
+.gallery-type {font-size:10px;color:var(--blue);font-weight:700;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:7px}
+.gallery-body h4 {font-size:16px;color:var(--navy);margin-bottom:7px}
+.gallery-body p {font-size:12px;color:var(--muted);flex:1}
+.gallery-placeholder {display:inline-block;margin-top:15px;font-size:11px;color:#8492a3;font-style:italic}
+.gallery-link {display:inline-block;margin-top:15px;font-size:12px;font-weight:700;color:var(--blue)}
+.gallery-link:hover {text-decoration:underline}
 
-    .content-section { background: var(--white); }
-    .content-note {
-      background: var(--light-blue);
-      border-radius: 10px;
-      padding: 28px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .recognition-grid, .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .simple-card {
-      background: white;
-      border: 1px solid var(--line);
-      padding: 23px;
-      border-radius: 9px;
-    }
-    .simple-card h3 { color: var(--navy); font-size: 16px; }
-    .simple-card p { color: var(--muted); font-size: 13px; margin-top: 6px; }
+.recognition-grid,.education-grid {display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.simple-card {padding:22px}
+.simple-card h3 {color:var(--navy);font-size:16px}
+.simple-card p {color:var(--muted);font-size:13px;margin-top:6px}
+.skills-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skill-card {padding:22px}
+.skill-card h3 {color:var(--navy);font-size:15px;margin-bottom:9px}
+.skill-card p {color:var(--muted);font-size:13px}
 
-    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .skill-card { background: white; border: 1px solid var(--line); padding: 22px; border-radius: 9px; }
-    .skill-card h3 { color: var(--navy); font-size: 15px; margin-bottom: 10px; }
-    .skill-card p { color: var(--muted); font-size: 13px; }
+.contact-section {background:var(--navy);color:white}
+.contact-section .section-heading h2 {color:white}
+.contact-section .section-heading p {color:#c5d2e1}
+.contact-links {display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
+.contact-links a {border:1px solid #68809c;border-radius:6px;padding:11px 17px;font-size:13px;font-weight:600}
+.contact-links a:hover {background:#23476d}
+footer {text-align:center;color:var(--muted);padding:23px;font-size:12px}
 
-    .contact-section { background: var(--navy); color: white; }
-    .contact-section .section-heading h2 { color: white; }
-    .contact-section .section-heading p { color: #c5d2e1; }
-    .contact-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 25px; }
-    .contact-links a {
-      border: 1px solid #68809c;
-      border-radius: 6px;
-      padding: 11px 17px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .contact-links a:hover { background: #23476d; }
-    footer { text-align: center; color: var(--muted); padding: 23px; font-size: 12px; }
+.modal {display:none;position:fixed;inset:0;z-index:30;background:rgba(10,24,42,.72);padding:25px;overflow-y:auto}
+.modal.show {display:flex;align-items:flex-start;justify-content:center}
+.modal-content {width:min(760px,100%);background:white;border-radius:10px;padding:35px;margin:30px auto;position:relative}
+.close-modal {position:absolute;top:13px;right:19px;border:0;background:none;font-size:27px;cursor:pointer;color:var(--muted)}
+.modal-content h2 {color:var(--navy);font-family:'Playfair Display',serif;font-size:27px;padding-right:25px;margin-bottom:12px}
+.modal-content p {color:var(--muted);font-size:14px;margin-bottom:14px}
+.modal-content h3 {color:var(--blue);font-size:15px;margin:21px 0 6px}
+.modal-content ul {padding-left:20px;color:var(--muted);font-size:13px}
+.modal-content li {margin-bottom:6px}
 
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 30;
-      background: rgba(10,24,42,.72);
-      padding: 25px;
-      overflow-y: auto;
-    }
-    .modal.show { display: flex; align-items: flex-start; justify-content: center; }
-    .modal-content {
-      width: min(760px, 100%);
-      background: white;
-      border-radius: 10px;
-      padding: 35px;
-      margin: 30px auto;
-      position: relative;
-    }
-    .close-modal {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      border: 0;
-      background: none;
-      font-size: 26px;
-      cursor: pointer;
-      color: var(--muted);
-    }
-    .modal-content h2 {
-      color: var(--navy);
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      padding-right: 25px;
-      margin-bottom: 12px;
-    }
-    .modal-content p { color: var(--muted); font-size: 14px; margin-bottom: 15px; }
-    .modal-content h3 { color: var(--blue); font-size: 15px; margin: 22px 0 6px; }
-    .modal-content ul { padding-left: 20px; color: var(--muted); font-size: 13px; }
-    .modal-content li { margin-bottom: 6px; }
-
-    @media (max-width: 800px) {
-      .hero-grid, .about-grid { grid-template-columns: 1fr; }
-      .portrait-card { margin: 10px auto 0; max-width: 310px; }
-      .case-grid, .skills-grid { grid-template-columns: 1fr 1fr; }
-      .nav-links { display: none; position: absolute; top: 74px; left: 0; right: 0; background: white; padding: 20px 5%; flex-direction: column; border-bottom: 1px solid var(--line); }
-      .nav-links.open { display: flex; }
-      .menu-btn { display: block; }
-    }
-    @media (max-width: 540px) {
-      .case-grid, .skills-grid, .recognition-grid, .education-grid { grid-template-columns: 1fr; }
-      .experience-top { flex-direction: column; gap: 2px; }
-      .hero { padding: 60px 0; }
-      section { padding: 58px 0; }
-      .modal-content { padding: 25px 20px; }
-    }
-  </style>
+@media(max-width:800px) {
+  .hero-grid,.about-grid {grid-template-columns:1fr}
+  .portrait-card {margin:10px auto 0;max-width:310px}
+  .case-grid,.gallery-grid,.skills-grid {grid-template-columns:1fr 1fr}
+  .nav-links {display:none;position:absolute;top:74px;left:0;right:0;background:white;padding:20px 5%;flex-direction:column;border-bottom:1px solid var(--line)}
+  .nav-links.open {display:flex}
+  .menu-btn {display:block}
+}
+@media(max-width:540px) {
+  .case-grid,.gallery-grid,.skills-grid,.recognition-grid,.education-grid {grid-template-columns:1fr}
+  .experience-top {flex-direction:column;gap:2px}
+  .hero {padding:58px 0}
+  section {padding:55px 0}
+  .modal-content {padding:25px 20px}
+}
+</style>
 </head>
-<body>
 
+<body>
 <header>
-  <nav class="container">
-    <a href="#home" class="logo">Mahmuda Urmi.</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#work">Selected Work</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<nav class="container">
+  <a href="#home" class="logo">Mahmuda Urmi.</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#work">Case Studies</a></li>
+    <li><a href="#gallery">Creative Work</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 </header>
 
 <main>
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Communication · Public Relations · Content</div>
-        <h1>Mahmuda Urmi</h1>
-        <div class="hero-subtitle">Communicator. Storyteller. Curious mind.</div>
-        <p class="hero-description">
-          I work at the intersection of communication, public relations,
-          community engagement and storytelling. I enjoy understanding people,
-          finding meaning in conversations and turning ideas into thoughtful
-          communication.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">Explore My Work</a>
-          <a class="btn btn-outline" href="https://www.linkedin.com/in/mahmudahaqueurmi/" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
-        </div>
-      </div>
-      <div class="portrait-card">
-        <img src="urmi.png" alt="Mahmuda Urmi">
+<section class="hero" id="home">
+<div class="container hero-grid">
+  <div>
+    <div class="eyebrow">Communication · Public Relations · Content</div>
+    <h1>Mahmuda Urmi</h1>
+    <div class="hero-subtitle">Communicator. Storyteller. Curious mind.</div>
+    <p class="hero-description">
+      I work at the intersection of communication, public relations,
+      community engagement and storytelling. I enjoy understanding people,
+      finding meaning in conversations and turning ideas into thoughtful communication.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#work">Explore My Work</a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/mahmudahaqueurmi/" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
+    </div>
+  </div>
+  <div class="portrait-card">
+    <img src="urmi.png" alt="Mahmuda Urmi">
+  </div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+  <div class="section-heading">
+    <div class="eyebrow">A little about me</div>
+    <h2>Communication with purpose.</h2>
+  </div>
+  <div class="about-grid">
+    <div>
+      <p>I am a communication and public relations professional with experience in community management, digital reputation, media relations, content strategy and team leadership.</p>
+      <p>My professional journey has allowed me to work across corporate communication, campus media, public relations, content development and field research. These experiences have shaped how I approach people, stories and problem-solving.</p>
+      <p>I am currently pursuing a Bachelor's degree in Media Studies and Journalism at the University of Liberal Arts Bangladesh, majoring in Public Relations.</p>
+      <p>I am particularly interested in meaningful communication, development and impact-focused storytelling, and opportunities where research, creativity and communication come together.</p>
+    </div>
+    <div class="focus-card">
+      <h3>Areas of interest</h3>
+      <div class="focus-list">
+        <span class="tag">Public Relations</span><span class="tag">Corporate Communication</span>
+        <span class="tag">Community Management</span><span class="tag">Content Strategy</span>
+        <span class="tag">Digital Reputation</span><span class="tag">Media Relations</span>
+        <span class="tag">Storytelling</span><span class="tag">Social Listening</span>
+        <span class="tag">Development Communication</span><span class="tag">Research & Analysis</span>
       </div>
     </div>
-  </section>
+  </div>
+</div>
+</section>
 
-  <section id="about">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">A little about me</div>
-        <h2>Communication with purpose.</h2>
-      </div>
-      <div class="about-grid">
-        <div>
-          <p>
-            I am a communication and public relations professional with
-            experience in community management, digital reputation,
-            media relations, content strategy and team leadership.
-          </p>
-          <p>
-            My professional journey has allowed me to work across corporate
-            communication, campus media, public relations, content development
-            and field research. These experiences have shaped how I approach
-            people, stories and problem-solving.
-          </p>
-          <p>
-            I am currently pursuing a Bachelor's degree in Media Studies and
-            Journalism at the University of Liberal Arts Bangladesh, majoring
-            in Public Relations.
-          </p>
-          <p>
-            I am particularly interested in meaningful communication,
-            development and impact-focused storytelling, and opportunities
-            where research, creativity and communication come together.
-          </p>
+<section class="experience-section" id="experience">
+<div class="container">
+  <div class="section-heading">
+    <div class="eyebrow">Professional journey</div>
+    <h2>Experience</h2>
+    <p>A collection of roles and experiences that have shaped my professional journey.</p>
+  </div>
+  <div class="experience-list">
+
+    <article class="experience-card">
+      <div class="experience-top"><div><h3>ACI Logistics Limited (Shwapno)</h3><div class="role">Supervisor, Community Management</div></div><div class="date">November 2024 – Present</div></div>
+      <p>Oversee community management operations with a focus on customer experience, digital brand reputation and effective communication. Directly supervise a six-member team while coordinating cross-channel issue management, social listening, stakeholder communication and management reporting.</p>
+      <a class="small-link" href="#work">Explore case study ↓</a>
+    </article>
+
+    <article class="experience-card">
+      <div class="experience-top"><div><h3>Verve Productions</h3><div class="role">Content Writer · Freelance</div></div><div class="date">January 2023 – Present</div></div>
+      <p>Contribute to content writing and creative communication projects.</p>
+    </article>
+
+    <article class="experience-card">
+      <div class="experience-top"><div><h3>Silver Fox Toady</h3><div class="role">Content Strategist · Contract</div></div><div class="date">March 2024 – August 2024</div></div>
+      <p>Oversaw editorial planning and news selection, guided the graphics team on visual presentation, reviewed final creatives and coordinated inbound collaboration requests with organisations and individuals.</p>
+    </article>
+
+    <article class="experience-card">
+      <div class="experience-top"><div><h3>Hult Prize at ULAB</h3><div class="role">Head of Public Relations</div></div><div class="date">November 2023 – February 2024</div></div>
+      <p>Led media relations and publicity coordination, worked directly with media representatives including Somoy TV and The Business Standard, and supervised press release preparation and editorial quality.</p>
+      <a class="small-link" href="#work">Explore case study ↓</a>
+    </article>
+
+    <article class="experience-card">
+      <div class="experience-top"><div><h3>Digital Marketing Solution (Pvt.) Ltd.</h3><div class="role">Content Creator / Video Presenter · Freelance</div></div><div class="date">March 2023 – February 2024</div></div>
+      <p>Worked as an on-camera video presenter for two videos produced for Matrimony Bangladesh.</p>
+    </article>
+
+    <article class="experience-card">
+      <div class="experience-top"><div><h3>The Business Standard</h3><div class="role">Campus Reporter · Apprenticeship</div></div><div class="date">June 2023 – December 2023</div></div>
+      <p>Supported campus-related news and event collaborations, helping facilitate coordination between the university community and the publication.</p>
+    </article>
+
+    <article class="experience-card">
+      <div class="experience-top"><div><h3>The Business Standard</h3><div class="role">EDGE Associate</div></div><div class="date">December 2022 – December 2023</div></div>
+      <p>Supported campus-related news and event collaboration activities.</p>
+    </article>
+
+    <article class="experience-card">
+      <div class="experience-top"><div><h3>PriyoShop</h3><div class="role">Executive Assistant to CEO · Internship</div></div><div class="date">April 2023 – July 2023</div></div>
+      <p>Supported administrative tasks, meeting coordination, communication and follow-ups.</p>
+    </article>
+
+    <article class="experience-card">
+      <div class="experience-top"><div><h3>Project Ujjibon</h3><div class="role">Field Research Assistant · Contract</div></div><div class="date">August 2018 – January 2019</div></div>
+      <p>Participated in field visits, surveys, interviews, on-site data collection and community engagement activities.</p>
+    </article>
+
+    <article class="experience-card">
+      <div class="experience-top"><div><h3>icddr,b</h3><div class="role">Field Research Assistant · Contract</div></div><div class="date">January 2017 – January 2018</div></div>
+      <p>Supported field research through surveys, interviews and on-site data collection.</p>
+    </article>
+
+    <article class="experience-card">
+      <div class="experience-top"><div><h3>ULAB Radio CampBuzz</h3><div class="role">Station Manager</div></div><div class="date">June 2021 – August 2024</div></div>
+      <p>Led an eight-member executive team and guided approximately 50 members across eight functional departments. Focused on leadership development, organisational restructuring, radio programming, training, brand management and audience engagement.</p>
+      <a class="small-link" href="#work">Explore case study ↓</a>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<section id="work">
+<div class="container">
+  <div class="section-heading">
+    <div class="eyebrow">Selected work</div>
+    <h2>Projects & Case Studies</h2>
+    <p>A closer look at selected professional experiences, responsibilities and learning.</p>
+  </div>
+  <div class="case-grid">
+    <article class="case-card">
+      <div class="case-number">01 / CORPORATE COMMUNICATION</div>
+      <h3>Brand Communication, Community Management & Digital Reputation</h3>
+      <p>Customer experience, team leadership, cross-channel issue management, social listening and management communication at Shwapno.</p>
+      <button onclick="openCase('shwapno')">Explore case study →</button>
+    </article>
+    <article class="case-card">
+      <div class="case-number">02 / LEADERSHIP & MEDIA</div>
+      <h3>Building Teams, Developing Talent & Shaping Campus Radio</h3>
+      <p>Leading a diverse campus radio team, developing talent, restructuring operations and shaping creative programming at CampBuzz.</p>
+      <button onclick="openCase('campbuzz')">Explore case study →</button>
+    </article>
+    <article class="case-card">
+      <div class="case-number">03 / PUBLIC RELATIONS</div>
+      <h3>Building Media Relations & Expanding Public Visibility</h3>
+      <p>Media outreach, editorial oversight, publicity coordination and event representation at Hult Prize at ULAB.</p>
+      <button onclick="openCase('hult')">Explore case study →</button>
+    </article>
+  </div>
+</div>
+</section>
+
+<section class="content-section" id="gallery">
+<div class="container">
+  <div class="section-heading gallery-intro">
+    <div class="eyebrow">Beyond the job title</div>
+    <h2>Selected Content & Creative Work</h2>
+    <p>A collection of professional projects and personal creative expressions. This space brings together the different ways I communicate, create and tell stories.</p>
+  </div>
+
+  <div class="gallery-category">
+    <h3>Professional Portfolio</h3>
+    <p>Communication projects, content work and professional collaborations.</p>
+    <div class="gallery-grid">
+
+      <article class="gallery-card">
+        <div class="gallery-visual">▶</div>
+        <div class="gallery-body">
+          <div class="gallery-type">Video & On-Camera</div>
+          <h4>Video Presentation</h4>
+          <p>Selected on-camera presentation work, including video projects created for Matrimony Bangladesh.</p>
+          <span class="gallery-placeholder">Video link and thumbnail coming soon</span>
         </div>
-        <div class="focus-card">
-          <h3>Areas of interest</h3>
-          <div class="focus-list">
-            <span class="tag">Public Relations</span>
-            <span class="tag">Corporate Communication</span>
-            <span class="tag">Community Management</span>
-            <span class="tag">Content Strategy</span>
-            <span class="tag">Digital Reputation</span>
-            <span class="tag">Media Relations</span>
-            <span class="tag">Storytelling</span>
-            <span class="tag">Social Listening</span>
-            <span class="tag">Development Communication</span>
-            <span class="tag">Research & Analysis</span>
-          </div>
+      </article>
+
+      <article class="gallery-card">
+        <div class="gallery-visual">✎</div>
+        <div class="gallery-body">
+          <div class="gallery-type">Content & Editorial</div>
+          <h4>Content Writing & Editorial Projects</h4>
+          <p>Selected writing, editorial planning and content development work from Verve Productions and Silver Fox Toady.</p>
+          <span class="gallery-placeholder">Original work samples coming soon</span>
         </div>
-      </div>
+      </article>
+
+      <article class="gallery-card">
+        <div class="gallery-visual">◈</div>
+        <div class="gallery-body">
+          <div class="gallery-type">Public Relations</div>
+          <h4>Media Relations & Publicity</h4>
+          <p>Selected PR initiatives, media coordination and publicity activities from Hult Prize at ULAB.</p>
+          <span class="gallery-placeholder">Media links and campaign materials coming soon</span>
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <div class="gallery-visual">◎</div>
+        <div class="gallery-body">
+          <div class="gallery-type">Corporate Communication</div>
+          <h4>Community & Digital Communication</h4>
+          <p>Selected examples of communication strategy, customer engagement and digital reputation work.</p>
+          <span class="gallery-placeholder">Curated examples coming soon</span>
+        </div>
+      </article>
+
     </div>
-  </section>
+  </div>
 
-  <section class="experience-section" id="experience">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Professional journey</div>
-        <h2>Experience</h2>
-        <p>A collection of roles and experiences that have shaped my professional journey.</p>
-      </div>
+  <div class="gallery-category">
+    <h3>Personal & Creative Portfolio</h3>
+    <p>A more personal space for ideas, observations and creative explorations.</p>
+    <div class="gallery-grid">
 
-      <div class="experience-list">
+      <article class="gallery-card">
+        <div class="gallery-visual">✧</div>
+        <div class="gallery-body">
+          <div class="gallery-type">Personal Storytelling</div>
+          <h4>Thoughts & Reflections</h4>
+          <p>Personal writing, everyday observations and reflections on people, experiences and life.</p>
+          <span class="gallery-placeholder">Selected writing coming soon</span>
+        </div>
+      </article>
 
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>ACI Logistics Limited (Shwapno)</h3>
-              <div class="role">Supervisor, Community Management</div>
-            </div>
-            <div class="date">November 2024 – Present</div>
-          </div>
-          <p>
-            Oversee community management operations with a focus on customer
-            experience, digital brand reputation and effective communication.
-            Directly supervise a six-member team while coordinating cross-channel
-            issue management, social listening, stakeholder communication and
-            management reporting.
-          </p>
-          <a class="small-link" href="#work">Explore case study ↓</a>
-        </article>
+      <article class="gallery-card">
+        <div class="gallery-visual">▧</div>
+        <div class="gallery-body">
+          <div class="gallery-type">Visual Creativity</div>
+          <h4>Photography & Visual Stories</h4>
+          <p>Visual moments, creative compositions and photographs that capture everyday stories.</p>
+          <span class="gallery-placeholder">Photo collection coming soon</span>
+        </div>
+      </article>
 
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>Verve Productions</h3>
-              <div class="role">Content Writer · Freelance</div>
-            </div>
-            <div class="date">January 2023 – Present</div>
-          </div>
-          <p>Contribute to content writing and creative communication projects.</p>
-        </article>
+      <article class="gallery-card">
+        <div class="gallery-visual">♡</div>
+        <div class="gallery-body">
+          <div class="gallery-type">Lifestyle & Creativity</div>
+          <h4>Food, Culture & Everyday Life</h4>
+          <p>Creative experiments and personal interests expressed through food, culture and everyday experiences.</p>
+          <span class="gallery-placeholder">Personal projects coming soon</span>
+        </div>
+      </article>
 
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>Silver Fox Toady</h3>
-              <div class="role">Content Strategist · Contract</div>
-            </div>
-            <div class="date">March 2024 – August 2024</div>
-          </div>
-          <p>
-            Oversaw editorial planning and news selection, guided the graphics
-            team on visual presentation, reviewed final creatives and coordinated
-            inbound collaboration requests with organisations and individuals.
-          </p>
-        </article>
-
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>Hult Prize at ULAB</h3>
-              <div class="role">Head of Public Relations</div>
-            </div>
-            <div class="date">November 2023 – February 2024</div>
-          </div>
-          <p>
-            Led media relations and publicity coordination, worked directly
-            with media representatives including Somoy TV and The Business
-            Standard, and supervised press release preparation and editorial
-            quality.
-          </p>
-          <a class="small-link" href="#work">Explore case study ↓</a>
-        </article>
-
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>Digital Marketing Solution (Pvt.) Ltd.</h3>
-              <div class="role">Content Creator / Video Presenter · Freelance</div>
-            </div>
-            <div class="date">March 2023 – February 2024</div>
-          </div>
-          <p>Worked as an on-camera video presenter for two videos produced for Matrimony Bangladesh.</p>
-        </article>
-
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>The Business Standard</h3>
-              <div class="role">Campus Reporter · Apprenticeship</div>
-            </div>
-            <div class="date">June 2023 – December 2023</div>
-          </div>
-          <p>Supported campus-related news and event collaborations, helping facilitate coordination between the university community and the publication.</p>
-        </article>
-
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>The Business Standard</h3>
-              <div class="role">EDGE Associate</div>
-            </div>
-            <div class="date">December 2022 – December 2023</div>
-          </div>
-          <p>Supported campus-related news and event collaboration activities.</p>
-        </article>
-
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>PriyoShop</h3>
-              <div class="role">Executive Assistant to CEO · Internship</div>
-            </div>
-            <div class="date">April 2023 – July 2023</div>
-          </div>
-          <p>Supported administrative tasks, meeting coordination, communication and follow-ups.</p>
-        </article>
-
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>Project Ujjibon</h3>
-              <div class="role">Field Research Assistant · Contract</div>
-            </div>
-            <div class="date">August 2018 – January 2019</div>
-          </div>
-          <p>Participated in field visits, surveys, interviews, on-site data collection and community engagement activities.</p>
-        </article>
-
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>icddr,b</h3>
-              <div class="role">Field Research Assistant · Contract</div>
-            </div>
-            <div class="date">January 2017 – January 2018</div>
-          </div>
-          <p>Supported field research through surveys, interviews and on-site data collection.</p>
-        </article>
-
-        <article class="experience-card">
-          <div class="experience-top">
-            <div>
-              <h3>ULAB Radio CampBuzz</h3>
-              <div class="role">Station Manager</div>
-            </div>
-            <div class="date">June 2021 – August 2024</div>
-          </div>
-          <p>
-            Led an eight-member executive team and guided approximately
-            50 members across eight functional departments. Focused on
-            leadership development, organisational restructuring, radio
-            programming, training, brand management and audience engagement.
-          </p>
-          <a class="small-link" href="#work">Explore case study ↓</a>
-        </article>
-
-      </div>
     </div>
-  </section>
+  </div>
+</div>
+</section>
 
-  <section id="work">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Selected work</div>
-        <h2>Projects & Case Studies</h2>
-        <p>A closer look at selected professional experiences, responsibilities and learning.</p>
-      </div>
-      <div class="case-grid">
+<section id="recognition">
+<div class="container">
+  <div class="section-heading"><div class="eyebrow">Milestones</div><h2>Recognition</h2></div>
+  <div class="recognition-grid">
+    <div class="simple-card"><h3>Best Station Manager Award</h3><p>ULAB Radio CampBuzz</p></div>
+    <div class="simple-card"><h3>Best Public Relations Head Award</h3><p>Hult Prize at ULAB</p></div>
+  </div>
+</div>
+</section>
 
-        <article class="case-card">
-          <div class="case-number">01 / CORPORATE COMMUNICATION</div>
-          <h3>Brand Communication, Community Management & Digital Reputation</h3>
-          <p>Customer experience, team leadership, cross-channel issue management, social listening and management communication at Shwapno.</p>
-          <button onclick="openCase('shwapno')">Explore case study →</button>
-        </article>
-
-        <article class="case-card">
-          <div class="case-number">02 / LEADERSHIP & MEDIA</div>
-          <h3>Building Teams, Developing Talent & Shaping Campus Radio</h3>
-          <p>Leading a diverse campus radio team, developing talent, restructuring operations and shaping creative programming at CampBuzz.</p>
-          <button onclick="openCase('campbuzz')">Explore case study →</button>
-        </article>
-
-        <article class="case-card">
-          <div class="case-number">03 / PUBLIC RELATIONS</div>
-          <h3>Building Media Relations & Expanding Public Visibility</h3>
-          <p>Media outreach, editorial oversight, publicity coordination and event representation at Hult Prize at ULAB.</p>
-          <button onclick="openCase('hult')">Explore case study →</button>
-        </article>
-
-      </div>
+<section id="education">
+<div class="container">
+  <div class="section-heading"><div class="eyebrow">Academic background</div><h2>Education</h2></div>
+  <div class="education-grid">
+    <div class="simple-card">
+      <h3>University of Liberal Arts Bangladesh (ULAB)</h3>
+      <p>Bachelor's in Media Studies and Journalism</p>
+      <p>Major: Public Relations · Ongoing</p>
     </div>
-  </section>
+  </div>
+</div>
+</section>
 
-  <section class="content-section" id="content">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Creative work</div>
-        <h2>Content & Storytelling</h2>
-        <p>A space for selected writing, videos, creative projects and communication work.</p>
-      </div>
-      <div class="content-note">
-        This section will feature selected content from Verve Productions,
-        Silver Fox Toady, video presentation projects and personal creative
-        work. Original links, thumbnails and short descriptions will be added
-        as the collection is curated.
-      </div>
-    </div>
-  </section>
+<section id="skills">
+<div class="container">
+  <div class="section-heading"><div class="eyebrow">What I bring</div><h2>Skills & Capabilities</h2></div>
+  <div class="skills-grid">
+    <div class="skill-card"><h3>Communication & PR</h3><p>Public relations, media relations, corporate communication, stakeholder engagement and brand communication.</p></div>
+    <div class="skill-card"><h3>Digital & Community</h3><p>Community management, social listening, digital reputation, customer engagement and issue management.</p></div>
+    <div class="skill-card"><h3>Content & Storytelling</h3><p>Content strategy, editorial planning, creative direction, writing and video presentation.</p></div>
+    <div class="skill-card"><h3>Leadership & Management</h3><p>Team leadership, mentoring, conflict resolution, capacity building and operational coordination.</p></div>
+    <div class="skill-card"><h3>Research & Analysis</h3><p>Customer sentiment analysis, field research, data collection, reporting and insight development.</p></div>
+    <div class="skill-card"><h3>Strategic Thinking</h3><p>Problem-solving, communication planning, process improvement and cross-functional collaboration.</p></div>
+  </div>
+</div>
+</section>
 
-  <section id="recognition">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Milestones</div>
-        <h2>Recognition</h2>
-      </div>
-      <div class="recognition-grid">
-        <div class="simple-card">
-          <h3>Best Station Manager Award</h3>
-          <p>ULAB Radio CampBuzz</p>
-        </div>
-        <div class="simple-card">
-          <h3>Best Public Relations Head Award</h3>
-          <p>Hult Prize at ULAB</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Academic background</div>
-        <h2>Education</h2>
-      </div>
-      <div class="education-grid">
-        <div class="simple-card">
-          <h3>University of Liberal Arts Bangladesh (ULAB)</h3>
-          <p>Bachelor's in Media Studies and Journalism</p>
-          <p>Major: Public Relations · Ongoing</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">What I bring</div>
-        <h2>Skills & Capabilities</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Communication & PR</h3>
-          <p>Public relations, media relations, corporate communication, stakeholder engagement and brand communication.</p>
-        </div>
-        <div class="skill-card">
-          <h3>Digital & Community</h3>
-          <p>Community management, social listening, digital reputation, customer engagement and issue management.</p>
-        </div>
-        <div class="skill-card">
-          <h3>Content & Storytelling</h3>
-          <p>Content strategy, editorial planning, creative direction, writing and video presentation.</p>
-        </div>
-        <div class="skill-card">
-          <h3>Leadership & Management</h3>
-          <p>Team leadership, mentoring, conflict resolution, capacity building and operational coordination.</p>
-        </div>
-        <div class="skill-card">
-          <h3>Research & Analysis</h3>
-          <p>Customer sentiment analysis, field research, data collection, reporting and insight development.</p>
-        </div>
-        <div class="skill-card">
-          <h3>Strategic Thinking</h3>
-          <p>Problem-solving, communication planning, process improvement and cross-functional collaboration.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow" style="color:#a9c9e8">Let's connect</div>
-        <h2>Good conversations can lead somewhere meaningful.</h2>
-        <p>
-          Interested in communication, public relations, content, storytelling
-          or meaningful collaborations? I would love to connect.
-        </p>
-      </div>
-      <div class="contact-links">
-        <a href="mailto:mahmudaurmi7@gmail.com">Email Me</a>
-        <a href="https://www.linkedin.com/in/mahmudahaqueurmi/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
-    </div>
-  </section>
+<section class="contact-section" id="contact">
+<div class="container">
+  <div class="section-heading">
+    <div class="eyebrow" style="color:#a9c9e8">Let's connect</div>
+    <h2>Good conversations can lead somewhere meaningful.</h2>
+    <p>Interested in communication, public relations, content, storytelling or meaningful collaborations? I would love to connect.</p>
+  </div>
+  <div class="contact-links">
+    <a href="mailto:mahmudaurmi7@gmail.com">Email Me</a>
+    <a href="https://www.linkedin.com/in/mahmudahaqueurmi/" target="_blank" rel="noopener">LinkedIn ↗</a>
+  </div>
+</div>
+</section>
 </main>
 
-<footer>
-  © <span id="year"></span> Mahmuda Urmi. All rights reserved.
-</footer>
+<footer>© <span id="year"></span> Mahmuda Urmi. All rights reserved.</footer>
 
 <div class="modal" id="caseModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal-content">
-    <button class="close-modal" onclick="closeCase()" aria-label="Close">&times;</button>
-    <div id="modalBody"></div>
-  </div>
+<div class="modal-content">
+  <button class="close-modal" onclick="closeCase()" aria-label="Close">&times;</button>
+  <div id="modalBody"></div>
+</div>
 </div>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  const menuBtn = document.getElementById('menuBtn');
-  const navLinks = document.getElementById('navLinks');
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
 
-  menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
+const cases = {
+shwapno: `
+<div class="eyebrow">Corporate Communication · ACI Logistics Limited</div>
+<h2 id="modalTitle">Brand Communication, Community Management & Digital Reputation</h2>
+<p>At Shwapno, I oversee community management operations with a focus on customer experience, digital brand reputation and effective communication. My role brings together team leadership, cross-channel issue management, social listening, stakeholder coordination and management reporting. Working across both strategic and operational responsibilities, I help translate customer conversations into actionable insights while ensuring that concerns are appropriately investigated and followed through to resolution.</p>
+<h3>01. Community Management & Team Leadership</h3>
+<ul><li>Directly supervise a six-member team and oversee daily priorities and workload distribution.</li><li>Monitor service quality and maintain consistent customer communication standards.</li><li>Support team coordination and operational efficiency.</li></ul>
+<h3>02. Cross-Channel Issue Management & Resolution</h3>
+<ul><li>Oversee customer and employee-related concerns across official and unofficial digital channels.</li><li>Coordinate relevant departments and stakeholders to facilitate investigations.</li><li>Conduct or review root cause analysis depending on the severity and sensitivity of cases.</li><li>Monitor corrective actions through resolution.</li></ul>
+<h3>03. Social Listening & Customer Sentiment Analysis</h3>
+<ul><li>Monitor customer conversations and public discussions across digital platforms.</li><li>Identify recurring concerns, product-related issues and potential brand reputation risks.</li><li>Analyse sentiment and discussion patterns to generate actionable insights.</li></ul>
+<h3>04. Management Reporting & Strategic Communication</h3>
+<ul><li>Prepare and present management reports, analytical summaries and presentations.</li><li>Highlight key observations, emerging concerns and relevant customer insights.</li><li>Support management visibility, informed decision-making and service improvement.</li></ul>
+<h3>05. Response Strategy & Process Improvement</h3>
+<ul><li>Develop, review and update standardised response templates for promotional offers and customer queries.</li><li>Ensure accuracy, consistency and alignment with brand communication standards.</li></ul>
+<h3>06. Cross-Functional & Senior Stakeholder Coordination</h3>
+<ul><li>Coordinate with senior management, department heads and cross-functional stakeholders.</li><li>Communicate findings, highlight risks and provide updates to support timely resolution.</li></ul>
+`,
+campbuzz: `
+<div class="eyebrow">Leadership · ULAB Radio CampBuzz</div>
+<h2 id="modalTitle">Building Teams, Developing Talent & Shaping Campus Radio</h2>
+<p>My journey as Station Manager at ULAB Radio CampBuzz was an opportunity to explore leadership beyond conventional team management. I was responsible for overseeing station operations, guiding a diverse team, developing creative programming and strengthening the station's identity and community presence. Working with eight executive team members and approximately 50 members across eight functional departments, I focused on building a collaborative environment where people could develop their skills, contribute ideas and take ownership of their responsibilities.</p>
+<h3>01. Leadership & Team Development</h3>
+<ul><li>Led an eight-member executive leadership team and guided department heads.</li><li>Mentored members, encouraged participation and supported individual development.</li><li>Facilitated conflict resolution and strengthened team collaboration.</li></ul>
+<h3>02. Organisational Development & Operational Restructuring</h3>
+<ul><li>Refined departmental responsibilities and redefined leadership roles.</li><li>Established clearer reporting and coordination systems.</li><li>Improved operational workflows, recruitment, onboarding and member development processes.</li></ul>
+<h3>03. Training, Workshops & Capacity Building</h3>
+<ul><li>Designed and facilitated workshops on RJ skills and news presentation.</li><li>Conducted sessions on organisational behaviour and team orientation.</li><li>Supported members in strengthening broadcasting abilities and teamwork.</li></ul>
+<h3>04. Programme Development & Creative Direction</h3>
+<ul><li>Collaborated with team members to conceptualise and develop radio programme formats.</li><li>Worked on Murder & Mystery, InformationBuzz, Storytelling, Icon and Plan, Pack & Travel.</li><li>Encouraged collaborative ideation and diverse content formats.</li></ul>
+<h3>05. Brand Management & Audience Engagement</h3>
+<ul><li>Monitored CampBuzz's digital presence and promotional activities.</li><li>Supervised audience engagement initiatives and external communication.</li></ul>
+<h3>06. External Partnerships & Stakeholder Engagement</h3>
+<ul><li>Supervised external communication and partnership activities.</li><li>Represented CampBuzz in relevant engagements and supported relationship-building.</li></ul>
+<h3>07. Leadership Philosophy & Personal Growth</h3>
+<p>My leadership approach combined Transformational and Laissez-faire leadership. I focused on inspiring and motivating team members, encouraging creativity and individual growth, while giving department heads the autonomy to manage their teams and take ownership of their responsibilities.</p>
+<p>My experience taught me that leadership goes beyond assigning responsibilities and achieving targets. It involves understanding people, building trust, navigating conflicts, making difficult decisions and knowing when to delegate or step in.</p>
+`,
+hult: `
+<div class="eyebrow">Public Relations · Hult Prize at ULAB</div>
+<h2 id="modalTitle">Building Media Relations & Expanding Public Visibility</h2>
+<p>As Head of Public Relations at Hult Prize at ULAB, I worked on strengthening the event's public presence through media outreach, relationship-building and strategic publicity coordination. Working closely with a sub-executive, I personally handled media communication and relationship development while supervising press release preparation and coordinating publicity activities. My focus was to build meaningful media connections and secure opportunities for the event to reach a wider audience.</p>
+<h3>01. Media Relations & Partnership Development</h3>
+<ul><li>Personally established and maintained media relationships with outlets including Somoy TV and The Business Standard.</li><li>Communicated directly with media representatives to facilitate press coverage and PR publication.</li><li>Supported the event's visibility and public presence.</li></ul>
+<h3>02. Media Outreach & Publicity Coordination</h3>
+<ul><li>Identified relevant media outlets and led targeted media outreach.</li><li>Coordinated PR submissions and news coverage.</li><li>Supported publicity planning to expand the event's reach.</li></ul>
+<h3>03. PR Content Supervision & Editorial Oversight</h3>
+<ul><li>Supervised press releases prepared by the sub-executive.</li><li>Reviewed content for accuracy, clarity and messaging consistency.</li><li>Aligned PR content with the event's communication objectives.</li></ul>
+<h3>04. Event Representation & Media Engagement</h3>
+<ul><li>Represented Hult Prize at ULAB in relevant media and event engagements.</li><li>Facilitated communication with journalists and media representatives.</li><li>Supported interview coordination and publicity activities.</li></ul>
+<h3>05. Leadership & Professional Contribution</h3>
+<p>Worked closely with a sub-executive to coordinate PR activities, supervise content preparation and maintain communication with media representatives throughout the publicity process.</p>
+`
+};
 
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
-  });
-
-  const cases = {
-    shwapno: `
-      <div class="eyebrow">Corporate Communication · ACI Logistics Limited</div>
-      <h2 id="modalTitle">Brand Communication, Community Management & Digital Reputation</h2>
-      <p>At Shwapno, I oversee community management operations with a focus on customer experience, digital brand reputation and effective communication. My role brings together team leadership, cross-channel issue management, social listening, stakeholder coordination and management reporting. Working across both strategic and operational responsibilities, I help translate customer conversations into actionable insights while ensuring that concerns are appropriately investigated and followed through to resolution.</p>
-
-      <h3>01. Community Management & Team Leadership</h3>
-      <ul>
-        <li>Directly supervise a six-member team and oversee daily priorities and workload distribution.</li>
-        <li>Monitor service quality and maintain consistent customer communication standards.</li>
-        <li>Support team coordination and operational efficiency.</li>
-      </ul>
-
-      <h3>02. Cross-Channel Issue Management & Resolution</h3>
-      <ul>
-        <li>Oversee customer and employee-related concerns across official and unofficial digital channels.</li>
-        <li>Coordinate relevant departments and stakeholders to facilitate investigations.</li>
-        <li>Conduct or review root cause analysis depending on the severity and sensitivity of cases.</li>
-        <li>Monitor corrective actions through resolution.</li>
-      </ul>
-
-      <h3>03. Social Listening & Customer Sentiment Analysis</h3>
-      <ul>
-        <li>Monitor customer conversations and public discussions across digital platforms.</li>
-        <li>Identify recurring concerns, product-related issues and potential brand reputation risks.</li>
-        <li>Analyse sentiment and discussion patterns to generate actionable insights.</li>
-      </ul>
-
-      <h3>04. Management Reporting & Strategic Communication</h3>
-      <ul>
-        <li>Prepare and present management reports, analytical summaries and presentations.</li>
-        <li>Highlight key observations, emerging concerns and relevant customer insights.</li>
-        <li>Support management visibility, informed decision-making and service improvement.</li>
-      </ul>
-
-      <h3>05. Response Strategy & Process Improvement</h3>
-      <ul>
-        <li>Develop, review and update standardised response templates for promotional offers and customer queries.</li>
-        <li>Ensure accuracy, consistency and alignment with brand communication standards.</li>
-        <li>Refine response practices in line with changing offers, policies and customer needs.</li>
-      </ul>
-
-      <h3>06. Cross-Functional & Senior Stakeholder Coordination</h3>
-      <ul>
-        <li>Coordinate with senior management, department heads and cross-functional stakeholders.</li>
-        <li>Communicate findings, highlight risks and provide updates to support timely resolution.</li>
-        <li>Exercise operational judgement while consulting the reporting manager on sensitive or high-impact matters.</li>
-      </ul>
-    `,
-
-    campbuzz: `
-      <div class="eyebrow">Leadership · ULAB Radio CampBuzz</div>
-      <h2 id="modalTitle">Building Teams, Developing Talent & Shaping Campus Radio</h2>
-      <p>My journey as Station Manager at ULAB Radio CampBuzz was an opportunity to explore leadership beyond conventional team management. I was responsible for overseeing station operations, guiding a diverse team, developing creative programming and strengthening the station's identity and community presence. Working with eight executive team members and approximately 50 members across eight functional departments, I focused on building a collaborative environment where people could develop their skills, contribute ideas and take ownership of their responsibilities.</p>
-
-      <h3>01. Leadership & Team Development</h3>
-      <ul>
-        <li>Led an eight-member executive leadership team and guided department heads.</li>
-        <li>Mentored members, encouraged participation and supported individual development.</li>
-        <li>Facilitated conflict resolution and strengthened team collaboration.</li>
-      </ul>
-
-      <h3>02. Organisational Development & Operational Restructuring</h3>
-      <ul>
-        <li>Refined departmental responsibilities and redefined leadership roles.</li>
-        <li>Established clearer reporting and coordination systems.</li>
-        <li>Improved operational workflows, recruitment, onboarding and member development processes.</li>
-      </ul>
-
-      <h3>03. Training, Workshops & Capacity Building</h3>
-      <ul>
-        <li>Designed and facilitated workshops on RJ skills and news presentation.</li>
-        <li>Conducted sessions on organisational behaviour and team orientation.</li>
-        <li>Supported members in strengthening broadcasting abilities and teamwork.</li>
-      </ul>
-
-      <h3>04. Programme Development & Creative Direction</h3>
-      <ul>
-        <li>Collaborated with team members to conceptualise and develop radio programme formats.</li>
-        <li>Worked on Murder & Mystery, InformationBuzz, Storytelling, Icon and Plan, Pack & Travel.</li>
-        <li>Encouraged collaborative ideation and diverse content formats.</li>
-      </ul>
-
-      <h3>05. Brand Management & Audience Engagement</h3>
-      <ul>
-        <li>Monitored CampBuzz's digital presence and promotional activities.</li>
-        <li>Supervised audience engagement initiatives and external communication.</li>
-        <li>Maintained consistency in the station's public identity.</li>
-      </ul>
-
-      <h3>06. External Partnerships & Stakeholder Engagement</h3>
-      <ul>
-        <li>Supervised external communication and partnership activities.</li>
-        <li>Represented CampBuzz in relevant engagements and supported relationship-building.</li>
-        <li>Coordinated with external organisations, media and event partners.</li>
-      </ul>
-
-      <h3>07. Leadership Philosophy & Personal Growth</h3>
-      <p>My leadership approach combined Transformational and Laissez-faire leadership. I focused on inspiring and motivating team members, encouraging creativity and individual growth, while giving department heads the autonomy to manage their teams and take ownership of their responsibilities.</p>
-      <p>My experience taught me that leadership goes beyond assigning responsibilities and achieving targets. It involves understanding people, building trust, navigating conflicts, making difficult decisions and knowing when to delegate or step in.</p>
-    `,
-
-    hult: `
-      <div class="eyebrow">Public Relations · Hult Prize at ULAB</div>
-      <h2 id="modalTitle">Building Media Relations & Expanding Public Visibility</h2>
-      <p>As Head of Public Relations at Hult Prize at ULAB, I worked on strengthening the event's public presence through media outreach, relationship-building and strategic publicity coordination. Working closely with a sub-executive, I personally handled media communication and relationship development while supervising press release preparation and coordinating publicity activities. My focus was to build meaningful media connections and secure opportunities for the event to reach a wider audience.</p>
-
-      <h3>01. Media Relations & Partnership Development</h3>
-      <ul>
-        <li>Personally established and maintained media relationships with outlets including Somoy TV and The Business Standard.</li>
-        <li>Communicated directly with media representatives to facilitate press coverage and PR publication.</li>
-        <li>Supported the event's visibility and public presence.</li>
-      </ul>
-
-      <h3>02. Media Outreach & Publicity Coordination</h3>
-      <ul>
-        <li>Identified relevant media outlets and led targeted media outreach.</li>
-        <li>Coordinated PR submissions and news coverage.</li>
-        <li>Supported publicity planning to expand the event's reach.</li>
-      </ul>
-
-      <h3>03. PR Content Supervision & Editorial Oversight</h3>
-      <ul>
-        <li>Supervised press releases prepared by the sub-executive.</li>
-        <li>Reviewed content for accuracy, clarity and messaging consistency.</li>
-        <li>Aligned PR content with the event's communication objectives.</li>
-      </ul>
-
-      <h3>04. Event Representation & Media Engagement</h3>
-      <ul>
-        <li>Represented Hult Prize at ULAB in relevant media and event engagements.</li>
-        <li>Facilitated communication with journalists and media representatives.</li>
-        <li>Supported interview coordination and publicity activities.</li>
-      </ul>
-
-      <h3>05. Leadership & Professional Contribution</h3>
-      <p>Worked closely with a sub-executive to coordinate PR activities, supervise content preparation and maintain communication with media representatives throughout the publicity process.</p>
-    `
-  };
-
-  function openCase(name) {
-    document.getElementById('modalBody').innerHTML = cases[name];
-    document.getElementById('caseModal').classList.add('show');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeCase() {
-    document.getElementById('caseModal').classList.remove('show');
-    document.body.style.overflow = '';
-  }
-
-  document.getElementById('caseModal').addEventListener('click', function(event) {
-    if (event.target === this) closeCase();
-  });
-
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') closeCase();
-  });
+function openCase(name) {
+  document.getElementById('modalBody').innerHTML = cases[name];
+  document.getElementById('caseModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+function closeCase() {
+  document.getElementById('caseModal').classList.remove('show');
+  document.body.style.overflow = '';
+}
+document.getElementById('caseModal').addEventListener('click',function(event) {
+  if(event.target === this) closeCase();
+});
+document.addEventListener('keydown',function(event) {
+  if(event.key === 'Escape') closeCase();
+});
 </script>
-
 </body>
 </html>
